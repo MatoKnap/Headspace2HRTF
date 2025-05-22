@@ -1,3 +1,6 @@
 [submodule "Mesh2HRTF"]
 	path = Mesh2HRTF
 	url = https://github.com/Any2HRTF/Mesh2HRTF.git
+[submodule "mesh2hrtf-tools-code"]
+	path = mesh2hrtf-tools-code
+	url = https://git.code.sf.net/p/mesh2hrtf-tools/code
