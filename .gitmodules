@@ -4,3 +4,10 @@
 [submodule "mesh2hrtf-tools-code"]
 	path = mesh2hrtf-tools-code
 	url = https://git.code.sf.net/p/mesh2hrtf-tools/code
+  
+[submodule "MICA"]
+	path = MICA
+	url = https://github.com/Zielon/MICA.git
+[submodule "FLAME_PyTorch"]
+	path = FLAME_PyTorch
+	url = https://github.com/soubhiksanyal/FLAME_PyTorch.git
