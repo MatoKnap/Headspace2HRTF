@@ -277,6 +277,166 @@ def make_watertight(mesh):
         print("Ostrzeżenie: Siatka nadal nie jest szczelna po próbie naprawy.")
     return mesh
 
+def seal_neck_hole(mesh, masking_util):
+    """
+    Uszczelnia duży otwór na szyi modelu FLAME.
+    1. Znajduje krawędź otworu za pomocą maski 'boundary'.
+    2. Tworzy "zatyczkę" z trójkątów w formie wachlarza.
+    3. Łączy nową geometrię z istniejącą siatką.
+    """
+    print("-> Rozpoczynanie procedury uszczelniania szyi...")
+    
+    # Sprawdzenie, czy siatka w ogóle ma dziury
+    if mesh.is_watertight:
+        print("   Siatka jest już szczelna. Pomijanie uszczelniania szyi.")
+        return mesh
+
+    # 1. Znajdź wierzchołki na granicy szyi
+    neck_boundary_indices = masking_util.get_mask_vertices('boundary')
+    if len(neck_boundary_indices) == 0:
+        print("   Ostrzeżenie: Nie znaleziono wierzchołków dla maski 'boundary'.")
+        return mesh
+
+    # 2. Użyj trimesh.outline, aby znaleźć uporządkowaną pętlę krawędzi
+    #    To jest bardziej niezawodne niż ręczne sortowanie wierzchołków.
+    try:
+        outlines = mesh.outline()
+        # Znajdźmy pętlę, która w większości składa się z naszych wierzchołków z maski
+        neck_loop_idx = -1
+        max_overlap = 0
+        
+        # outlines.entities to lista ścieżek; dla dziur będą to obiekty Path3D
+        # których wierzchołki (nodes) tworzą zamkniętą pętlę.
+        for i, path in enumerate(outlines.entities):
+            # Używamy set do szybkiego sprawdzenia przecięcia
+            path_vertices_set = set(path.vertices)
+            neck_boundary_set = set(neck_boundary_indices)
+            overlap = len(path_vertices_set.intersection(neck_boundary_set))
+            if overlap > max_overlap:
+                max_overlap = overlap
+                neck_loop_idx = i
+
+        if neck_loop_idx == -1:
+            raise ValueError("Nie udało się zidentyfikować pętli krawędzi szyi.")
+
+        ordered_indices = outlines.entities[neck_loop_idx].vertices
+        print(f"   Znaleziono pętlę krawędzi szyi składającą się z {len(ordered_indices)} wierzchołków.")
+
+    except Exception as e:
+        print(f"   Błąd podczas znajdowania krawędzi szyi: {e}. Próba uszczelnienia nieudana.")
+        return mesh
+
+    # 3. Oblicz centroid pętli
+    boundary_verts = mesh.vertices[ordered_indices]
+    center_point = np.mean(boundary_verts, axis=0)
+
+    # 4. Dodaj nowy wierzchołek (centrum zatyczki)
+    new_vertices = np.vstack([mesh.vertices, center_point])
+    center_idx = len(mesh.vertices) 
+
+    # 5. Stwórz nowe trójkąty (wachlarz)
+    new_faces = []
+    num_boundary_verts = len(ordered_indices)
+    for i in range(num_boundary_verts):
+        v1_idx = ordered_indices[i]
+        v2_idx = ordered_indices[(i + 1) % num_boundary_verts] # % zapewnia zapętlenie
+        new_faces.append([center_idx, v1_idx, v2_idx])
+    
+    new_faces_np = np.array(new_faces)
+
+    # 6. Połącz geometrię
+    combined_faces = np.vstack([mesh.faces, new_faces_np])
+    
+    # Tworzymy nową siatkę
+    sealed_mesh = trimesh.Trimesh(vertices=new_vertices, faces=combined_faces)
+    
+    # 7. Napraw orientację normalnych
+    # Jest to kluczowe po dodaniu nowej geometrii
+    sealed_mesh.fix_normals()
+    
+    print(f"   Szyja została uszczelniona. Nowa siatka ma {len(sealed_mesh.vertices)} wierzchołków i {len(sealed_mesh.faces)} ścian.")
+    
+    return sealed_mesh
+
+def remove_eyes_and_seal_sockets(mesh, masking_util):
+    """
+    Usuwa geometrię gałek ocznych i zamyka powstałe po nich oczodoły.
+    """
+    print("-> Rozpoczynanie procedury usuwania oczu i uszczelniania oczodołów...")
+
+    # 1. Identyfikacja wierzchołków i ścian gałek ocznych
+    left_eye_verts_indices = masking_util.get_mask_vertices('left_eyeball')
+    right_eye_verts_indices = masking_util.get_mask_vertices('right_eyeball')
+    eye_verts_indices = np.union1d(left_eye_verts_indices, right_eye_verts_indices)
+    
+    # Znajdź ściany, które należą do gałek ocznych (wszystkie 3 wierzchołki ściany muszą być w zestawie)
+    face_mask = np.isin(mesh.faces, eye_verts_indices).all(axis=1)
+    
+    # Usuń ściany gałek ocznych
+    mesh.update_faces(~face_mask)
+    
+    # Usuń nieużywane wierzchołki (w tym te od gałek ocznych)
+    mesh.remove_unreferenced_vertices()
+    print(f"   Usunięto geometrię gałek ocznych. Pozostało {len(mesh.vertices)} wierzchołków.")
+    
+    # 2. Teraz siatka ma dwie nowe dziury. Użyjmy tej samej logiki co dla szyi.
+    #    mesh.outline() znajdzie wszystkie 3 pętle: szyję i dwa oczodoły.
+    
+    # Upewnijmy się, że szyja jest już załatana, aby uniknąć pomyłki
+    # W praktyce, tę funkcję wywołamy przed załataniem szyi, więc to tylko dla pewności
+    
+    outlines = mesh.outline(face_indices=np.arange(len(mesh.faces))) # Upewniamy się, że analizuje całą siatkę
+    
+    if len(outlines.entities) == 0:
+        print("   Brak otwartych krawędzi po usunięciu oczu. Model jest już szczelny.")
+        return mesh
+
+    print(f"   Znaleziono {len(outlines.entities)} otwartych pętli do załatania (oczekiwane oczodoły + szyja).")
+    
+    # Nowe wierzchołki i ściany, które będziemy dodawać
+    new_verts_to_add = []
+    new_faces_to_add = []
+    
+    current_vertices = mesh.vertices.copy()
+    
+    for path in outlines.entities:
+        ordered_indices = path.vertices
+        
+        # Pomijamy bardzo duże pętle (prawdopodobnie szyja)
+        # Oczodoły mają zazwyczaj 30-60 wierzchołków. Szyja > 100.
+        if len(ordered_indices) > 80: 
+            print(f"   Pomijam dużą pętlę ({len(ordered_indices)} wierzchołków), zakładając, że to szyja.")
+            continue
+            
+        print(f"   Łatam pętlę o {len(ordered_indices)} wierzchołkach (prawdopodobnie oczodół).")
+        
+        boundary_verts = current_vertices[ordered_indices]
+        center_point = np.mean(boundary_verts, axis=0)
+        
+        # Dodajemy nowy wierzchołek i zapamiętujemy jego przyszły indeks
+        new_verts_to_add.append(center_point)
+        center_idx = len(current_vertices) + len(new_verts_to_add) - 1
+
+        # Tworzymy nowe ściany
+        num_boundary_verts = len(ordered_indices)
+        for i in range(num_boundary_verts):
+            v1_idx = ordered_indices[i]
+            v2_idx = ordered_indices[(i + 1) % num_boundary_verts]
+            new_faces_to_add.append([center_idx, v1_idx, v2_idx])
+            
+    # Po przejściu przez wszystkie pętle, aktualizujemy siatkę
+    if not new_verts_to_add:
+        print("   Nie znaleziono odpowiednich pętli do załatania jako oczodoły.")
+        return mesh
+        
+    final_vertices = np.vstack([current_vertices] + new_verts_to_add)
+    final_faces = np.vstack([mesh.faces] + new_faces_to_add)
+    
+    sealed_mesh = trimesh.Trimesh(vertices=final_vertices, faces=final_faces)
+    sealed_mesh.fix_normals()
+    
+    return sealed_mesh
+
 # --- GŁÓWNA LOGIKA PROGRAMU ---
 if __name__ == "__main__":
     seed = int(time.time())
@@ -398,11 +558,36 @@ if __name__ == "__main__":
     # print("\nKrok 4.1: Skalowanie modelu")
     
     print("\nKrok 4.2: Uszczelnianie modelu")
-    final_mesh = trimesh.Trimesh(vertices=vertices_final, faces=faces_np)
-    final_mesh_watertight = make_watertight(final_mesh)
+    
+    # Tworzymy siatkę trimesh z finalnie zorientowanymi wierzchołkami
+    final_mesh = trimesh.Trimesh(vertices=vertices_final, faces=faces_np, process=False)
+
+    # Krok 4.2.1: Usuń oczy i załataj oczodoły
+    mesh_no_eyes = remove_eyes_and_seal_sockets(final_mesh, masking_util)
+    
+    # Zapisz model pośredni do weryfikacji
+    path_intermediate_model = os.path.join(output_models_dir, f"{run_id}_intermediate_no_eyes.obj")
+    mesh_no_eyes.export(path_intermediate_model)
+    print(f"   Zapisano model bez oczu do: {path_intermediate_model}")
+    
+    # Krok 4.2.2: Załataj dziurę na szyi
+    final_mesh_watertight = seal_neck_hole(mesh_no_eyes, masking_util)
+    
+    # Ostateczne sprawdzenie
+    if final_mesh_watertight.is_watertight:
+        print("\nSUKCES: Model jest teraz szczelny (watertight)!")
+    else:
+        # Czasami po operacjach mogą powstać drobne problemy, które standardowe funkcje naprawią
+        print("\nOstrzeżenie: Model wciąż nie jest szczelny. Próba automatycznej naprawy za pomocą `trimesh.repair.fill_holes`...")
+        final_mesh_watertight.fill_holes()
+        if final_mesh_watertight.is_watertight:
+            print("SUKCES: Drobne otwory zostały załatane.")
+        else:
+            broken_face_indices = trimesh.repair.broken_faces(final_mesh_watertight)
+            print(f"BŁĄD: Ostateczna siatka wciąż nie jest szczelna. Liczba 'zepsutych' ścian: {len(broken_face_indices)}")
 
     path_final_model = os.path.join(output_models_dir, f"{run_id}_prepared.obj")
     final_mesh_watertight.export(path_final_model)
     print(f"\nZapisano przygotowany model do: {path_final_model}")
 
-    print("\nPrzetwarzanie zakończone pomyślnie.")
+    print("\nPrzetwarzanie zakończone.")

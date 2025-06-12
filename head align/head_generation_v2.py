@@ -31,6 +31,8 @@ def to_np(array, dtype=None):
         return np.array(np_array)
 
 # --- KLASY FLAME, Masking, SimpleConfig (bez zmian) ---
+# ... (Wklej tutaj swoje oryginalne, niezmienione klasy FLAME_PYTORCH, Masking i SimpleConfig)
+# --- Ze względu na długość, pomijam je tutaj, ale muszą one znaleźć się w finalnym pliku ---
 class FLAME_PYTORCH(nn.Module):
     def __init__(self, config, device):
         super(FLAME_PYTORCH, self).__init__()
@@ -145,7 +147,6 @@ class SimpleConfig:
         if self.use_face_contour and not os.path.exists(self.dynamic_landmark_embedding_path):
              raise FileNotFoundError(f"Error: Dynamic landmark file not found: {self.dynamic_landmark_embedding_path}")
 
-
 # --- NOWE I POPRAWIONE FUNKCJE ---
 
 def plot_mesh_matplotlib(vertices, faces, output_path, title,
@@ -161,14 +162,15 @@ def plot_mesh_matplotlib(vertices, faces, output_path, title,
 
     verts_np = to_np(vertices)
     
-    if show_full_mesh:
-        ax.scatter(verts_np[:, 0], verts_np[:, 1], verts_np[:, 2], 
-                   s=1, c='darkgrey', alpha=0.3, label='_nolegend_')
+    if show_full_mesh and faces is not None:
+        ax.plot_trisurf(verts_np[:, 0], verts_np[:, 1], verts_np[:, 2], 
+                        triangles=faces, color='lightgrey', alpha=0.5,
+                        linewidth=0, antialiased=False)
 
     if other_indices is not None and len(other_indices) > 0:
         other_points = verts_np[other_indices]
         ax.scatter(other_points[:, 0], other_points[:, 1], other_points[:, 2],
-                   s=15, c=other_colors, label='Region of Interest / Rejected')
+                   s=15, c=other_colors, label='Region of Interest / Rejected', depthshade=False)
 
     if highlight_indices is not None and len(highlight_indices) > 0:
         highlight_points = verts_np[highlight_indices]
@@ -187,16 +189,15 @@ def plot_mesh_matplotlib(vertices, faces, output_path, title,
     ax.set_ylim(mid_y - max_range/2, mid_y + max_range/2)
     ax.set_zlim(mid_z - max_range/2, mid_z + max_range/2)
 
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
-    ax.set_zlabel("Z")
+    ax.set_xlabel("X"); ax.set_ylabel("Y"); ax.set_zlabel("Z")
     ax.legend()
     plt.savefig(output_path)
     plt.close(fig)
 
 def find_ear_canal_vertices(vertices_np, masking_util, plot_path_prefix=None):
     """
-    Znajduje wierzchołki kanału słuchowego, filtrując punkty leżące daleko od centrum ucha.
+    (ULEPSZONA WERSJA) Znajduje wierzchołki kanału słuchowego, filtrując punkty leżące
+    daleko od centrum ucha, aby uniknąć wyboru punktów na małżowinie.
     """
     ear_regions = {'left': 'left_ear', 'right': 'right_ear'}
     final_indices = {}
@@ -210,9 +211,11 @@ def find_ear_canal_vertices(vertices_np, masking_util, plot_path_prefix=None):
             
         all_mask_verts = vertices_np[all_mask_indices]
         centroid = np.mean(all_mask_verts, axis=0)
+        
         distances_sq_yz = (all_mask_verts[:, 1] - centroid[1])**2 + (all_mask_verts[:, 2] - centroid[2])**2
+        
+        num_to_keep = max(10, len(all_mask_indices) // 2) 
         sorted_indices_by_dist = np.argsort(distances_sq_yz)
-        num_to_keep = len(all_mask_indices) // 2
         
         roi_indices_local = sorted_indices_by_dist[:num_to_keep]
         roi_indices_global = all_mask_indices[roi_indices_local]
@@ -221,7 +224,6 @@ def find_ear_canal_vertices(vertices_np, masking_util, plot_path_prefix=None):
         rejected_indices_global = all_mask_indices[rejected_indices_local]
 
         roi_verts = vertices_np[roi_indices_global]
-
         if side == 'left':
             best_local_idx = np.argmin(roi_verts[:, 0])
         else:
@@ -235,21 +237,22 @@ def find_ear_canal_vertices(vertices_np, masking_util, plot_path_prefix=None):
         if plot_path_prefix:
             plot_path = f"{plot_path_prefix}_{side}_ear_selection.png"
             azimuth = 90 if side == 'left' else -90
-            
             plot_mesh_matplotlib(vertices_np, None, plot_path,
                                  title=f"Wybór punktu w uchu ({side.capitalize()})",
                                  highlight_indices=[final_canal_idx], highlight_colors='red',
                                  other_indices=np.concatenate([roi_indices_global, rejected_indices_global]),
                                  other_colors=['blue']*len(roi_indices_global) + ['lightgrey']*len(rejected_indices_global),
-                                 view_elevation=80, view_azimuth=azimuth - 45,
+                                 view_elevation=0, view_azimuth=azimuth,
                                  show_full_mesh=False)
 
     return final_indices.get('left'), final_indices.get('right')
 
 
 def find_nose_tip_vertex(vertices_np, landmarks_np):
+    """Znajduje wierzchołek siatki najbliższy landmarkowi czubka nosa."""
     NOSE_TIP_LANDMARK_INDEX = 30
     if landmarks_np.shape[0] <= NOSE_TIP_LANDMARK_INDEX:
+        print("Błąd: Niewystarczająca liczba landmarków do znalezienia nosa.")
         return None
     nose_tip_coord = landmarks_np[NOSE_TIP_LANDMARK_INDEX]
     distances = np.linalg.norm(vertices_np - nose_tip_coord, axis=1)
@@ -261,25 +264,124 @@ def translate_vertices(vertices, vector):
 def rotate_vertices(vertices, rotation_matrix, center):
     return (vertices - center) @ rotation_matrix.T + center
 
-def scale_model(vertices_np, scale_factor):
-    return vertices_np * scale_factor
+def seal_mesh_by_triangulating_holes(mesh):
+    """
+    (WERSJA FINALNA) Uszczelnia siatkę poprzez znalezienie granic, a następnie dla każdej dziury:
+    1. Oblicza jej najlepiej dopasowaną płaszczyznę (origin + normal).
+    2. Używa trimesh.geometry.plane_transform do rzutowania na 2D.
+    3. Trianguluje w 2D.
+    4. Transformuje łatę z powrotem do 3D.
+    """
+    # Importujemy potrzebne, niskopoziomowe funkcje, aby mieć pewność, że są dostępne
+    from trimesh.geometry import plane_transform
+    import trimesh.transformations as tf
+    from trimesh.creation import triangulate_polygon
 
-def make_watertight(mesh):
     if mesh.is_watertight:
-        print("\nSiatka jest już szczelna.")
+        print("\nSiatka jest już szczelna. Pomijanie uszczelniania.")
         return mesh
-    print("\nSiatka nie jest szczelna. Próba wypełnienia dziur...")
-    mesh.fill_holes()
-    # print(trimesh.repair.stitch(mesh, faces=None, insert_vertices=True))
-    if mesh.is_watertight:
-        print("Udało się uszczelnić siatkę.")
+
+    print("\nSiatka nie jest szczelna. Rozpoczęcie zaawansowanego uszczelniania...")
+
+    # mesh.outline() zwraca obiekt Path3D, który zawiera pętle krawędzi (dziury)
+    # jako listę w atrybucie .entities
+    outline = mesh.outline()
+    
+    # Sprawdzenie, czy w ogóle znaleziono jakieś dziury.
+    if not hasattr(outline, 'entities') or len(outline.entities) == 0:
+        print("Nie znaleziono granic (entities) do załatania. Próba z prostszym fill_holes().")
+        mesh.fill_holes()
+        if mesh.is_watertight: 
+            print("Sukces, siatka uszczelniona przez fill_holes().")
+        else:
+            print("Ostrzeżenie: fill_holes() również nie uszczelniło siatki.")
+        return mesh
+
+    hole_entities = outline.entities
+    all_patches = []
+    print(f"Znaleziono {len(hole_entities)} potencjalnych dziur (encji) do załatania.")
+
+    for i, entity in enumerate(hole_entities):
+        # Dziura musi być zamkniętą pętlą z co najmniej 3 wierzchołkami, aby utworzyć trójkąt.
+        if not entity.closed or len(entity.nodes) < 3:
+            print(f"  > Pomijanie encji nr {i+1}, która nie jest zamkniętą pętlą z co najmniej 3 wierzchołkami.")
+            continue
+            
+        # entity.points zwraca INDEKSY wierzchołków z oryginalnej siatki
+        boundary_verts_indices = entity.points
+        print(f"  > Próba załatania dziury nr {i+1} składającej się z {len(boundary_verts_indices)} wierzchołków...")
+
+        try:
+            # Pobieramy współrzędne 3D tych wierzchołków
+            verts_3D = mesh.vertices[boundary_verts_indices]
+            
+            # KROK 1: Obliczenie najlepiej pasującej płaszczyzny (origin i normal) dla dziury
+            origin = np.mean(verts_3D, axis=0)
+            
+            # Najlepsza metoda na znalezienie wektora normalnego to PCA (analiza głównych składowych)
+            # na scentrowanych wierzchołkach. Wektor własny odpowiadający najmniejszej wartości własnej
+            # będzie normalną do płaszczyzny.
+            _, _, vh = np.linalg.svd(verts_3D - origin)
+            normal = vh[-1]
+
+            # KROK 2: Uzyskanie macierzy transformacji rzutującej na płaszczyznę 2D i jej odwrotności
+            to_2D = plane_transform(origin, normal)
+            to_3D = np.linalg.inv(to_2D)
+            
+            # Rzutujemy wierzchołki pętli do 2D (interesują nas tylko kolumny 0 i 1, czyli X i Y)
+            verts_2D = tf.transform_points(verts_3D, to_2D)[:, :2]
+
+            # KROK 3: Triangulacja rzutowanych wierzchołków 2D.
+            # 'triangle' to solidny i zalecany silnik do triangulacji.
+            patch_faces_local, patch_verts_2D = triangulate_polygon(verts_2D, engine='triangle')
+            
+            # KROK 4: Rzutowanie wierzchołków łaty z powrotem do 3D
+            # Tworzymy jednorodne współrzędne 3D (z Z=0), zanim zastosujemy transformację powrotną.
+            patch_verts_3D_homo = np.column_stack([
+                patch_verts_2D,
+                np.zeros(len(patch_verts_2D))
+            ])
+            patch_verts_3D = tf.transform_points(patch_verts_3D_homo, to_3D)
+
+            # KROK 5: Utworzenie siatki dla samej łaty i dodanie jej do listy
+            patch_mesh = trimesh.Trimesh(vertices=patch_verts_3D, faces=patch_faces_local, process=False)
+            all_patches.append(patch_mesh)
+            
+            print(f"    Pomyślnie utworzono łatę z {len(patch_faces_local)} trójkątów.")
+
+        except Exception as e:
+            # Łapanie wyjątków jest ważne, bo triangulacja może się nie udać dla zdegenerowanych kształtów.
+            print(f"    Ostrzeżenie: Nie udało się załatać dziury nr {i+1}. Błąd: {e}")
+
+    if not all_patches:
+        print("Nie udało się utworzyć żadnych łat. Zwracam oryginalny model.")
+        return mesh
+        
+    # KROK 6: Połączenie oryginalnej siatki ze wszystkimi nowymi łatami w jeden obiekt
+    print("Łączenie oryginalnej siatki z wygenerowanymi łatami...")
+    
+    final_mesh = trimesh.util.concatenate([mesh] + all_patches)
+    # process=True jest ważne, aby m.in. połączyć zduplikowane wierzchołki na granicach
+    final_mesh.process(validate=True)
+    
+    if final_mesh.is_watertight:
+        print("Sukces! Siatka została pomyślnie uszczelniona.")
     else:
-        print("Ostrzeżenie: Siatka nadal nie jest szczelna po próbie naprawy.")
-    return mesh
+        # Czasami po konkatenacji zostają mikroskopijne dziurki lub problemy z orientacją normalnych.
+        print("Siatka wciąż nie jest szczelna. Próba użycia fill_holes() i fix_normals() na drobnych pozostałościach...")
+        final_mesh.fill_holes()
+        final_mesh.fix_normals() # Naprawia orientację trójkątów
+        if final_mesh.is_watertight:
+            print("Sukces po drugiej próbie! Siatka jest teraz szczelna.")
+        else:
+             print("Ostrzeżenie: Siatka nadal nie jest szczelna po wszystkich próbach.")
+
+    return final_mesh
 
 # --- GŁÓWNA LOGIKA PROGRAMU ---
 if __name__ == "__main__":
     seed = int(time.time())
+    # seed = 1715873111 # Możesz ustawić konkretne ziarno do testów
     torch.manual_seed(seed)
     np.random.seed(seed)
     print(f"Używane ziarno losowania (seed): {seed}")
@@ -311,7 +413,6 @@ if __name__ == "__main__":
     faces_np = to_np(flamelayer.faces_tensor)
     
     trimesh.Trimesh(vertices=vertices_current, faces=faces_np).export(os.path.join(output_models_dir, f"{run_id}_0_original.obj"))
-    np.save(os.path.join(output_models_dir, f"{run_id}_params.npy"), to_np(shape_params[0]))
     plot_mesh_matplotlib(vertices_current, faces_np, os.path.join(output_plots_dir, f"{run_id}_0_original.png"), "Oryginalny model")
 
     # --- 2. Znajdowanie punktów kluczowych ---
@@ -332,7 +433,7 @@ if __name__ == "__main__":
     # --- 3. Wyrównywanie modelu (krok po kroku) ---
     print("\n--- Etap 3: Wyrównywanie modelu ---")
     
-    # Krok 3.1: Wstępne obroty
+    # Krok 3.1: Wstępne obroty dla lepszej orientacji
     print("\nKrok 3.1: Wstępne obroty")
     rot1 = R_scipy.from_euler('x', 90, degrees=True).as_matrix()
     vertices_current = rotate_vertices(vertices_current, rot1, center=[0,0,0])
@@ -348,7 +449,7 @@ if __name__ == "__main__":
     v_left = vertices_current[idx_left_canal]
     v_right = vertices_current[idx_right_canal]
     ear_midpoint = (v_left + v_right) / 2.0
-    ear_vector = v_left - v_right
+    ear_vector = v_left - v_right # Wektor od prawego do lewego ucha
     target_vector_y = np.array([0, 1.0, 0])
     
     rot3, _ = R_scipy.align_vectors([target_vector_y], [ear_vector])
@@ -358,51 +459,45 @@ if __name__ == "__main__":
                          "Oś uszu równoległa do Y",
                          highlight_indices=key_points_indices, highlight_colors=key_points_colors)
 
-    # Krok 3.3: Przesunięcie linii uszu na oś Y
-    print("\nKrok 3.3: Przesunięcie linii uszu na oś Y")
+    # Krok 3.3: Przesunięcie środka linii uszu do płaszczyzny YZ (X=0, Z=0)
+    print("\nKrok 3.3: Wycentrowanie linii uszu")
     v_left_curr = vertices_current[idx_left_canal]
     v_right_curr = vertices_current[idx_right_canal]
     ear_midpoint_curr = (v_left_curr + v_right_curr) / 2.0
-    translation_vec1 = np.array([-ear_midpoint_curr[0], 0, -ear_midpoint_curr[2]])
+    translation_vec1 = -ear_midpoint_curr
     vertices_current = translate_vertices(vertices_current, translation_vec1)
 
-    plot_mesh_matplotlib(vertices_current, faces_np, os.path.join(output_plots_dir, f"{run_id}_4_ears_on_Y_axis.png"), 
-                         "Linia uszu na osi Y (środek w XZ=0)",
+    plot_mesh_matplotlib(vertices_current, faces_np, os.path.join(output_plots_dir, f"{run_id}_4_ears_centered.png"), 
+                         "Linia uszu wycentrowana w (0,0,0)",
                          highlight_indices=key_points_indices, highlight_colors=key_points_colors)
     
-    # Krok 3.4: Obrót w płaszczyźnie XZ, by Z nosa = 0
-    print("\nKrok 3.4: Obrót, by Z nosa = 0")
+    # Krok 3.4: Obrót wokół osi Y, aby nos znalazł się w płaszczyźnie XY (Z=0)
+    print("\nKrok 3.4: Obrót, by nos znalazł się w płaszczyźnie XY")
     v_nose_curr = vertices_current[idx_nose_tip]
-    angle_rad = np.arctan2(v_nose_curr[2], v_nose_curr[0])
-    rot4 = R_scipy.from_euler('y', np.rad2deg(angle_rad), degrees=True).as_matrix()
-    vertices_current = rotate_vertices(vertices_current, rot4, center=[0, v_nose_curr[1], 0])
+    angle_rad = np.arctan2(v_nose_curr[2], v_nose_curr[0]) # Kąt w płaszczyźnie XZ
+    # Chcemy obrócić o -angle_rad, aby Z stało się zerem
+    rot4 = R_scipy.from_euler('y', -np.rad2deg(angle_rad), degrees=True).as_matrix()
+    vertices_final = rotate_vertices(vertices_current, rot4, center=[0, 0, 0])
 
-    plot_mesh_matplotlib(vertices_current, faces_np, os.path.join(output_plots_dir, f"{run_id}_5_nose_Z_zeroed.png"), 
-                         "Z nosa = 0",
-                         highlight_indices=key_points_indices, highlight_colors=key_points_colors)
-    
-    # Krok 3.5: Przesunięcie, by Y nosa = 0
-    print("\nKrok 3.5: Przesunięcie, by Y nosa = 0")
-    v_nose_final = vertices_current[idx_nose_tip]
-    translation_vec2 = np.array([0, -v_nose_final[1], 0])
-    vertices_final = translate_vertices(vertices_current, translation_vec2)
-
-    plot_mesh_matplotlib(vertices_final, faces_np, os.path.join(output_plots_dir, f"{run_id}_6_final_alignment.png"), 
+    plot_mesh_matplotlib(vertices_final, faces_np, os.path.join(output_plots_dir, f"{run_id}_5_final_alignment.png"), 
                          "Model finalnie wyrównany",
                          highlight_indices=key_points_indices, highlight_colors=key_points_colors)
     
-    # --- 4. Finalizacja ---
+    # --- 4. Finalizacja i uszczelnianie ---
     print("\n--- Etap 4: Finalizacja modelu ---")
     
-    # Skalowanie (opcjonalne, zakomentowane)
-    # print("\nKrok 4.1: Skalowanie modelu")
+    final_mesh_unsealed = trimesh.Trimesh(vertices=vertices_final, faces=faces_np)
     
-    print("\nKrok 4.2: Uszczelnianie modelu")
-    final_mesh = trimesh.Trimesh(vertices=vertices_final, faces=faces_np)
-    final_mesh_watertight = make_watertight(final_mesh)
+    # Krok 4.1: Uszczelnianie modelu za pomocą nowej funkcji
+    final_mesh_watertight = seal_mesh_by_triangulating_holes(final_mesh_unsealed)
 
-    path_final_model = os.path.join(output_models_dir, f"{run_id}_prepared.obj")
+    path_final_model = os.path.join(output_models_dir, f"{run_id}_prepared_watertight.obj")
     final_mesh_watertight.export(path_final_model)
-    print(f"\nZapisano przygotowany model do: {path_final_model}")
+    print(f"\nZapisano przygotowany i uszczelniony model do: {path_final_model}")
+
+    # Ostatnia wizualizacja
+    plot_mesh_matplotlib(final_mesh_watertight.vertices, final_mesh_watertight.faces, 
+                         os.path.join(output_plots_dir, f"{run_id}_6_final_watertight.png"), 
+                         "Finalny, uszczelniony model")
 
     print("\nPrzetwarzanie zakończone pomyślnie.")
