@@ -1,0 +1,2209 @@
+
+Starting manage_numcalc with the following arguments [Aug 26 2024, 14:51:42]
+----------------------------------------------------------------------------
+project_path: D:\mesh2hrtf-tools
+numcalc_path: Searching for NumCalc_WindowsExe
+max_ram_load: 31.12 GB (31.12 GB detected, 25.81 GB available)
+ram_safety_factor: 1.05
+max_cpu_load: 90 %
+max_instances: 16 (16 cores detected)
+wait_time: 15 seconds
+starting_order: alternate
+confirm_errors: True
+
+NumCalc executable: D:\mesh2hrtf-tools\NumCalc_WindowsExe\NumCalc.exe
+
+
+Per project summary of instances that will be run
+-------------------------------------------------
+Detected 2 Mesh2HRTF projects in
+D:\mesh2hrtf-tools
+
+Obtaining RAM estimates for D:\mesh2hrtf-tools\myHRTF_project_L\NumCalc\source_1
+Obtaining RAM estimates for D:\mesh2hrtf-tools\myHRTF_project_R\NumCalc\source_1
+
+160/160 frequency steps to run in 'myHRTF_project_L'
+160/160 frequency steps to run in 'myHRTF_project_R'
+
+
+Started 'myHRTF_project_L' project (1/2, Aug 26 2024, 14:51:51)
+---------------------------------------------------------------
+Running 160/160 unfinished frequency steps in the project
+
+1/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:51:51)
+source 1, step 1, 150.0 Hz
+estimated 10.61 GB RAM of available 25.80 GB required
+
+2/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:52:06)
+source 1, step 6, 900.0 Hz
+estimated 2.28 GB RAM of available 15.88 GB required
+
+3/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:52:22)
+source 1, step 3, 450.0 Hz
+estimated 10.61 GB RAM of available 13.59 GB required
+
+4/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:52:37)
+source 1, step 7, 1050.0 Hz
+estimated 2.28 GB RAM of available 4.26 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:52:52)
+4 NumCalc instances running at 25.20% CPU load
+2.08 GB RAM available (29.04 GB used), 2.4 GB required
+
+5/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:54:28)
+source 1, step 78, 11700.0 Hz
+estimated 3.48 GB RAM of available 3.49 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:54:43)
+4 NumCalc instances running at 25.90% CPU load
+1.65 GB RAM available (29.47 GB used), 2.4 GB required
+
+6/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:54:51)
+source 1, step 8, 1200.0 Hz
+estimated 2.28 GB RAM of available 3.10 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:55:07)
+4 NumCalc instances running at 25.40% CPU load
+2.1 GB RAM available (29.02 GB used), 2.4 GB required
+
+7/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:55:25)
+source 1, step 40, 6000.0 Hz
+estimated 2.37 GB RAM of available 2.44 GB required
+
+8/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:55:40)
+source 1, step 13, 1950.0 Hz
+estimated 2.28 GB RAM of available 6.01 GB required
+
+9/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:55:55)
+source 1, step 79, 11850.0 Hz
+estimated 3.48 GB RAM of available 3.63 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:56:10)
+7 NumCalc instances running at 44.50% CPU load
+0.74 GB RAM available (30.38 GB used), 2.4 GB required
+
+10/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:56:51)
+source 1, step 12, 1800.0 Hz
+estimated 2.28 GB RAM of available 2.85 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:57:06)
+8 NumCalc instances running at 50.40% CPU load
+1.0 GB RAM available (30.12 GB used), 2.4 GB required
+
+11/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:57:08)
+source 1, step 42, 6300.0 Hz
+estimated 2.37 GB RAM of available 2.42 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:57:23)
+8 NumCalc instances running at 51.80% CPU load
+1.31 GB RAM available (29.81 GB used), 2.4 GB required
+
+12/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:57:49)
+source 1, step 11, 1650.0 Hz
+estimated 2.28 GB RAM of available 2.61 GB required
+
+13/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:58:04)
+source 1, step 74, 11100.0 Hz
+estimated 3.22 GB RAM of available 3.28 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:58:19)
+7 NumCalc instances running at 45.10% CPU load
+2.26 GB RAM available (28.86 GB used), 2.4 GB required
+
+14/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:58:21)
+source 1, step 10, 1500.0 Hz
+estimated 2.28 GB RAM of available 4.45 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:58:36)
+8 NumCalc instances running at 51.90% CPU load
+2.12 GB RAM available (29.00 GB used), 2.4 GB required
+
+15/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:59:20)
+source 1, step 56, 8400.0 Hz
+estimated 2.71 GB RAM of available 2.80 GB required
+
+16/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:59:35)
+source 1, step 9, 1350.0 Hz
+estimated 2.28 GB RAM of available 2.40 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 14:59:50)
+8 NumCalc instances running at 49.60% CPU load
+1.81 GB RAM available (29.31 GB used), 2.4 GB required
+
+17/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 14:59:56)
+source 1, step 43, 6450.0 Hz
+estimated 2.37 GB RAM of available 2.44 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:00:11)
+8 NumCalc instances running at 47.30% CPU load
+0.77 GB RAM available (30.35 GB used), 2.4 GB required
+
+18/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:00:27)
+source 1, step 15, 2250.0 Hz
+estimated 2.28 GB RAM of available 3.79 GB required
+
+19/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:00:42)
+source 1, step 116, 17400.0 Hz
+estimated 5.16 GB RAM of available 5.21 GB required
+
+20/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:00:57)
+source 1, step 14, 2100.0 Hz
+estimated 2.28 GB RAM of available 2.54 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:01:12)
+9 NumCalc instances running at 48.20% CPU load
+0.96 GB RAM available (30.16 GB used), 2.4 GB required
+
+21/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:01:33)
+source 1, step 44, 6600.0 Hz
+estimated 2.37 GB RAM of available 2.47 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:01:48)
+9 NumCalc instances running at 50.00% CPU load
+1.38 GB RAM available (29.74 GB used), 2.4 GB required
+
+22/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:02:01)
+source 1, step 16, 2400.0 Hz
+estimated 2.28 GB RAM of available 2.80 GB required
+
+23/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:02:17)
+source 1, step 46, 6900.0 Hz
+estimated 2.47 GB RAM of available 2.52 GB required
+
+24/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:02:32)
+source 1, step 21, 3150.0 Hz
+estimated 2.28 GB RAM of available 2.45 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:02:47)
+9 NumCalc instances running at 40.00% CPU load
+1.92 GB RAM available (29.20 GB used), 2.4 GB required
+
+25/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:02:49)
+source 1, step 75, 11250.0 Hz
+estimated 3.22 GB RAM of available 3.29 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:03:05)
+9 NumCalc instances running at 37.40% CPU load
+1.56 GB RAM available (29.56 GB used), 2.4 GB required
+
+26/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:03:22)
+source 1, step 20, 3000.0 Hz
+estimated 2.28 GB RAM of available 2.59 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:03:37)
+9 NumCalc instances running at 56.40% CPU load
+2.01 GB RAM available (29.10 GB used), 2.4 GB required
+
+27/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:03:45)
+source 1, step 110, 16500.0 Hz
+estimated 4.80 GB RAM of available 4.98 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:04:01)
+10 NumCalc instances running at 58.80% CPU load
+1.11 GB RAM available (30.01 GB used), 2.4 GB required
+
+28/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:04:07)
+source 1, step 19, 2850.0 Hz
+estimated 2.28 GB RAM of available 2.46 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:04:22)
+11 NumCalc instances running at 52.70% CPU load
+1.13 GB RAM available (29.99 GB used), 2.4 GB required
+
+29/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:04:30)
+source 1, step 66, 9900.0 Hz
+estimated 2.84 GB RAM of available 3.04 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:04:45)
+10 NumCalc instances running at 48.60% CPU load
+2.05 GB RAM available (29.07 GB used), 2.4 GB required
+
+30/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:04:49)
+source 1, step 18, 2700.0 Hz
+estimated 2.28 GB RAM of available 3.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:05:04)
+11 NumCalc instances running at 56.10% CPU load
+1.63 GB RAM available (29.49 GB used), 2.4 GB required
+
+31/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:05:10)
+source 1, step 65, 9750.0 Hz
+estimated 2.84 GB RAM of available 2.97 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:05:25)
+10 NumCalc instances running at 51.30% CPU load
+1.56 GB RAM available (29.56 GB used), 2.4 GB required
+
+32/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:05:32)
+source 1, step 17, 2550.0 Hz
+estimated 2.28 GB RAM of available 2.88 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:05:48)
+11 NumCalc instances running at 50.50% CPU load
+0.68 GB RAM available (30.44 GB used), 2.4 GB required
+
+33/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:05:56)
+source 1, step 64, 9600.0 Hz
+estimated 2.84 GB RAM of available 2.91 GB required
+
+34/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:06:11)
+source 1, step 25, 3750.0 Hz
+estimated 2.28 GB RAM of available 2.68 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:06:26)
+10 NumCalc instances running at 55.90% CPU load
+2.34 GB RAM available (28.78 GB used), 2.4 GB required
+
+35/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:06:40)
+source 1, step 73, 10950.0 Hz
+estimated 3.22 GB RAM of available 3.25 GB required
+
+36/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:06:55)
+source 1, step 26, 3900.0 Hz
+estimated 2.28 GB RAM of available 3.33 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:07:10)
+11 NumCalc instances running at 53.90% CPU load
+1.86 GB RAM available (29.25 GB used), 2.4 GB required
+
+37/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:08:51)
+source 1, step 41, 6150.0 Hz
+estimated 2.37 GB RAM of available 2.43 GB required
+
+38/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:09:06)
+source 1, step 27, 4050.0 Hz
+estimated 2.28 GB RAM of available 4.28 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:09:21)
+7 NumCalc instances running at 37.80% CPU load
+2.3 GB RAM available (28.82 GB used), 2.4 GB required
+
+39/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:09:22)
+source 1, step 54, 8100.0 Hz
+estimated 2.59 GB RAM of available 2.61 GB required
+
+40/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:09:38)
+source 1, step 28, 4200.0 Hz
+estimated 2.28 GB RAM of available 4.25 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:09:53)
+7 NumCalc instances running at 34.30% CPU load
+0.74 GB RAM available (30.37 GB used), 2.4 GB required
+
+41/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:10:32)
+source 1, step 48, 7200.0 Hz
+estimated 2.47 GB RAM of available 2.57 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:10:48)
+7 NumCalc instances running at 40.50% CPU load
+0.77 GB RAM available (30.35 GB used), 2.4 GB required
+
+42/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:11:00)
+source 1, step 29, 4350.0 Hz
+estimated 2.28 GB RAM of available 8.42 GB required
+
+43/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:11:15)
+source 1, step 144, 21600.0 Hz
+estimated 7.22 GB RAM of available 7.25 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:11:30)
+8 NumCalc instances running at 47.30% CPU load
+2.0 GB RAM available (29.12 GB used), 2.4 GB required
+
+44/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:11:40)
+source 1, step 22, 3300.0 Hz
+estimated 2.28 GB RAM of available 2.54 GB required
+
+45/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:11:55)
+source 1, step 55, 8250.0 Hz
+estimated 2.59 GB RAM of available 2.62 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:12:10)
+8 NumCalc instances running at 49.50% CPU load
+1.66 GB RAM available (29.45 GB used), 2.4 GB required
+
+46/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:12:13)
+source 1, step 23, 3450.0 Hz
+estimated 2.28 GB RAM of available 3.03 GB required
+
+47/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:12:28)
+source 1, step 2, 300.0 Hz
+estimated 10.61 GB RAM of available 11.01 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:12:43)
+7 NumCalc instances running at 35.20% CPU load
+2.01 GB RAM available (29.11 GB used), 2.4 GB required
+
+48/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:13:16)
+source 1, step 24, 3600.0 Hz
+estimated 2.28 GB RAM of available 3.76 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:13:31)
+8 NumCalc instances running at 51.40% CPU load
+1.93 GB RAM available (29.19 GB used), 2.4 GB required
+
+49/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:13:34)
+source 1, step 88, 13200.0 Hz
+estimated 3.76 GB RAM of available 3.83 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:13:50)
+7 NumCalc instances running at 41.90% CPU load
+1.71 GB RAM available (29.41 GB used), 2.4 GB required
+
+50/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:14:08)
+source 1, step 31, 4650.0 Hz
+estimated 2.28 GB RAM of available 2.75 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:14:23)
+7 NumCalc instances running at 42.90% CPU load
+1.69 GB RAM available (29.43 GB used), 2.4 GB required
+
+51/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:14:24)
+source 1, step 76, 11400.0 Hz
+estimated 3.31 GB RAM of available 3.33 GB required
+
+52/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:14:39)
+source 1, step 30, 4500.0 Hz
+estimated 2.28 GB RAM of available 2.61 GB required
+
+53/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:14:55)
+source 1, step 47, 7050.0 Hz
+estimated 2.47 GB RAM of available 2.55 GB required
+
+54/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:15:10)
+source 1, step 32, 4800.0 Hz
+estimated 2.28 GB RAM of available 5.12 GB required
+
+55/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:15:25)
+source 1, step 59, 8850.0 Hz
+estimated 2.71 GB RAM of available 2.84 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:15:40)
+10 NumCalc instances running at 61.90% CPU load
+2.02 GB RAM available (29.10 GB used), 2.4 GB required
+
+56/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:15:52)
+source 1, step 37, 5550.0 Hz
+estimated 2.28 GB RAM of available 2.67 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:16:07)
+10 NumCalc instances running at 63.60% CPU load
+0.7 GB RAM available (30.41 GB used), 2.4 GB required
+
+57/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:16:22)
+source 1, step 62, 9300.0 Hz
+estimated 2.84 GB RAM of available 2.95 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:16:37)
+11 NumCalc instances running at 71.30% CPU load
+1.98 GB RAM available (29.13 GB used), 2.4 GB required
+
+58/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:16:49)
+source 1, step 36, 5400.0 Hz
+estimated 2.28 GB RAM of available 2.65 GB required
+
+59/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:17:04)
+source 1, step 63, 9450.0 Hz
+estimated 2.84 GB RAM of available 2.96 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:17:19)
+12 NumCalc instances running at 73.30% CPU load
+2.27 GB RAM available (28.85 GB used), 2.4 GB required
+
+60/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:17:26)
+source 1, step 35, 5250.0 Hz
+estimated 2.28 GB RAM of available 4.59 GB required
+
+61/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:17:42)
+source 1, step 112, 16800.0 Hz
+estimated 5.03 GB RAM of available 5.14 GB required
+
+62/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:17:57)
+source 1, step 34, 5100.0 Hz
+estimated 2.28 GB RAM of available 3.30 GB required
+
+63/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:18:12)
+source 1, step 58, 8700.0 Hz
+estimated 2.71 GB RAM of available 2.77 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:18:27)
+11 NumCalc instances running at 67.90% CPU load
+2.02 GB RAM available (29.09 GB used), 2.4 GB required
+
+64/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:18:33)
+source 1, step 33, 4950.0 Hz
+estimated 2.28 GB RAM of available 3.68 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:18:48)
+10 NumCalc instances running at 60.70% CPU load
+1.38 GB RAM available (29.74 GB used), 2.4 GB required
+
+65/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:19:02)
+source 1, step 61, 9150.0 Hz
+estimated 2.71 GB RAM of available 3.02 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:19:17)
+11 NumCalc instances running at 63.30% CPU load
+1.02 GB RAM available (30.09 GB used), 2.4 GB required
+
+66/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:19:18)
+source 1, step 39, 5850.0 Hz
+estimated 2.28 GB RAM of available 2.44 GB required
+
+67/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:19:33)
+source 1, step 60, 9000.0 Hz
+estimated 2.71 GB RAM of available 2.85 GB required
+
+68/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:19:48)
+source 1, step 38, 5700.0 Hz
+estimated 2.28 GB RAM of available 3.96 GB required
+
+69/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:20:04)
+source 1, step 77, 11550.0 Hz
+estimated 3.31 GB RAM of available 3.38 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:20:19)
+10 NumCalc instances running at 57.00% CPU load
+1.86 GB RAM available (29.26 GB used), 2.6 GB required
+
+70/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:20:21)
+source 1, step 45, 6750.0 Hz
+estimated 2.47 GB RAM of available 3.29 GB required
+
+71/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:20:36)
+source 1, step 115, 17250.0 Hz
+estimated 5.16 GB RAM of available 5.38 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:20:52)
+11 NumCalc instances running at 62.70% CPU load
+2.18 GB RAM available (28.94 GB used), 2.6 GB required
+
+72/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:20:59)
+source 1, step 49, 7350.0 Hz
+estimated 2.47 GB RAM of available 3.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:21:14)
+11 NumCalc instances running at 56.60% CPU load
+1.39 GB RAM available (29.73 GB used), 2.6 GB required
+
+73/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:21:45)
+source 1, step 111, 16650.0 Hz
+estimated 4.80 GB RAM of available 5.13 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:22:00)
+10 NumCalc instances running at 54.10% CPU load
+2.15 GB RAM available (28.97 GB used), 2.6 GB required
+
+74/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:22:11)
+source 1, step 50, 7500.0 Hz
+estimated 2.47 GB RAM of available 3.28 GB required
+
+75/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:22:26)
+source 1, step 80, 12000.0 Hz
+estimated 3.48 GB RAM of available 3.65 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:22:41)
+10 NumCalc instances running at 54.50% CPU load
+2.01 GB RAM available (29.11 GB used), 2.72 GB required
+
+76/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:22:43)
+source 1, step 53, 7950.0 Hz
+estimated 2.59 GB RAM of available 4.06 GB required
+
+77/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:22:58)
+source 1, step 72, 10800.0 Hz
+estimated 3.07 GB RAM of available 3.21 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:23:13)
+10 NumCalc instances running at 57.00% CPU load
+1.86 GB RAM available (29.26 GB used), 2.72 GB required
+
+78/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:23:32)
+source 1, step 51, 7650.0 Hz
+estimated 2.59 GB RAM of available 3.92 GB required
+
+79/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:23:48)
+source 1, step 122, 18300.0 Hz
+estimated 5.68 GB RAM of available 5.75 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:24:03)
+9 NumCalc instances running at 52.30% CPU load
+2.25 GB RAM available (28.87 GB used), 2.72 GB required
+
+80/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:24:41)
+source 1, step 52, 7800.0 Hz
+estimated 2.59 GB RAM of available 3.02 GB required
+
+81/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:24:57)
+source 1, step 70, 10500.0 Hz
+estimated 3.07 GB RAM of available 3.34 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:25:12)
+10 NumCalc instances running at 59.70% CPU load
+1.68 GB RAM available (29.44 GB used), 2.84 GB required
+
+82/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:25:13)
+source 1, step 57, 8550.0 Hz
+estimated 2.71 GB RAM of available 5.51 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:25:28)
+11 NumCalc instances running at 60.70% CPU load
+2.56 GB RAM available (28.56 GB used), 3.22 GB required
+
+83/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:25:31)
+source 1, step 96, 14400.0 Hz
+estimated 4.25 GB RAM of available 4.44 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:25:46)
+11 NumCalc instances running at 62.70% CPU load
+1.49 GB RAM available (29.62 GB used), 3.22 GB required
+
+84/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:26:11)
+source 1, step 67, 10050.0 Hz
+estimated 3.07 GB RAM of available 4.46 GB required
+
+85/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:26:26)
+source 1, step 83, 12450.0 Hz
+estimated 3.48 GB RAM of available 3.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:26:41)
+9 NumCalc instances running at 50.00% CPU load
+1.2 GB RAM available (29.92 GB used), 3.22 GB required
+
+86/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:27:01)
+source 1, step 68, 10200.0 Hz
+estimated 3.07 GB RAM of available 5.38 GB required
+
+87/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:27:16)
+source 1, step 82, 12300.0 Hz
+estimated 3.48 GB RAM of available 3.50 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:27:31)
+10 NumCalc instances running at 62.30% CPU load
+0.82 GB RAM available (30.30 GB used), 3.22 GB required
+
+88/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:27:34)
+source 1, step 69, 10350.0 Hz
+estimated 3.07 GB RAM of available 3.45 GB required
+
+89/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:27:49)
+source 1, step 71, 10650.0 Hz
+estimated 3.07 GB RAM of available 3.31 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:28:04)
+11 NumCalc instances running at 21.60% CPU load
+0.44 GB RAM available (30.68 GB used), 3.65 GB required
+
+90/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:28:57)
+source 1, step 81, 12150.0 Hz
+estimated 3.48 GB RAM of available 4.57 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:29:12)
+10 NumCalc instances running at 50.90% CPU load
+3.31 GB RAM available (27.81 GB used), 3.84 GB required
+
+91/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:29:45)
+source 1, step 108, 16200.0 Hz
+estimated 4.80 GB RAM of available 4.80 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:30:00)
+9 NumCalc instances running at 49.10% CPU load
+1.23 GB RAM available (29.89 GB used), 3.84 GB required
+
+92/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:30:15)
+source 1, step 84, 12600.0 Hz
+estimated 3.65 GB RAM of available 6.25 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:30:30)
+8 NumCalc instances running at 50.80% CPU load
+3.13 GB RAM available (27.99 GB used), 3.94 GB required
+
+93/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:30:32)
+source 1, step 92, 13800.0 Hz
+estimated 3.94 GB RAM of available 4.02 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:30:48)
+8 NumCalc instances running at 49.10% CPU load
+1.54 GB RAM available (29.58 GB used), 3.94 GB required
+
+94/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:31:20)
+source 1, step 85, 12750.0 Hz
+estimated 3.76 GB RAM of available 4.35 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:31:35)
+6 NumCalc instances running at 35.40% CPU load
+1.06 GB RAM available (30.05 GB used), 3.94 GB required
+
+95/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:32:01)
+source 1, step 160, 24000.0 Hz
+estimated 8.67 GB RAM of available 10.35 GB required
+
+96/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:32:16)
+source 1, step 87, 13050.0 Hz
+estimated 3.76 GB RAM of available 3.97 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:32:31)
+7 NumCalc instances running at 42.50% CPU load
+0.85 GB RAM available (30.27 GB used), 3.94 GB required
+
+97/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:32:56)
+source 1, step 98, 14700.0 Hz
+estimated 4.25 GB RAM of available 4.26 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:33:11)
+7 NumCalc instances running at 46.50% CPU load
+2.79 GB RAM available (28.33 GB used), 3.94 GB required
+
+98/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:33:21)
+source 1, step 86, 12900.0 Hz
+estimated 3.76 GB RAM of available 5.27 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:50:33)
+8 NumCalc instances running at 50.00% CPU load
+0.87 GB RAM available (30.25 GB used), 4.14 GB required
+
+99/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:51:02)
+source 1, step 95, 14250.0 Hz
+estimated 4.25 GB RAM of available 4.37 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:51:17)
+8 NumCalc instances running at 50.90% CPU load
+0.92 GB RAM available (30.20 GB used), 4.14 GB required
+
+100/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:51:34)
+source 1, step 89, 13350.0 Hz
+estimated 3.94 GB RAM of available 4.58 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:51:49)
+8 NumCalc instances running at 42.20% CPU load
+1.13 GB RAM available (29.98 GB used), 4.14 GB required
+
+101/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:51:58)
+source 1, step 94, 14100.0 Hz
+estimated 4.05 GB RAM of available 4.25 GB required
+
+102/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:52:13)
+source 1, step 93, 13950.0 Hz
+estimated 3.94 GB RAM of available 8.85 GB required
+
+103/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:52:28)
+source 1, step 148, 22200.0 Hz
+estimated 7.52 GB RAM of available 7.67 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:52:43)
+8 NumCalc instances running at 47.00% CPU load
+0.69 GB RAM available (30.43 GB used), 4.14 GB required
+
+104/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:53:18)
+source 1, step 90, 13500.0 Hz
+estimated 3.94 GB RAM of available 4.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:53:33)
+7 NumCalc instances running at 42.30% CPU load
+2.2 GB RAM available (28.92 GB used), 4.14 GB required
+
+105/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:53:36)
+source 1, step 104, 15600.0 Hz
+estimated 4.58 GB RAM of available 4.71 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:53:51)
+8 NumCalc instances running at 51.30% CPU load
+0.64 GB RAM available (30.48 GB used), 4.14 GB required
+
+106/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:54:10)
+source 1, step 91, 13650.0 Hz
+estimated 3.94 GB RAM of available 5.99 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:54:26)
+9 NumCalc instances running at 55.20% CPU load
+1.83 GB RAM available (29.29 GB used), 4.46 GB required
+
+107/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:54:59)
+source 1, step 158, 23700.0 Hz
+estimated 8.49 GB RAM of available 9.11 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:55:14)
+7 NumCalc instances running at 44.90% CPU load
+2.32 GB RAM available (28.80 GB used), 4.46 GB required
+
+108/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:55:20)
+source 1, step 97, 14550.0 Hz
+estimated 4.25 GB RAM of available 4.83 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:55:35)
+7 NumCalc instances running at 41.10% CPU load
+2.04 GB RAM available (29.08 GB used), 4.46 GB required
+
+109/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:55:41)
+source 1, step 107, 16050.0 Hz
+estimated 4.80 GB RAM of available 4.94 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:55:57)
+8 NumCalc instances running at 49.10% CPU load
+1.67 GB RAM available (29.44 GB used), 4.46 GB required
+
+110/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:56:33)
+source 1, step 99, 14850.0 Hz
+estimated 4.25 GB RAM of available 5.36 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:56:48)
+8 NumCalc instances running at 50.40% CPU load
+1.35 GB RAM available (29.77 GB used), 4.46 GB required
+
+111/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:57:19)
+source 1, step 118, 17700.0 Hz
+estimated 5.39 GB RAM of available 5.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:57:34)
+6 NumCalc instances running at 36.60% CPU load
+4.4 GB RAM available (26.72 GB used), 4.46 GB required
+
+112/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:57:38)
+source 1, step 100, 15000.0 Hz
+estimated 4.25 GB RAM of available 9.66 GB required
+
+113/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:57:53)
+source 1, step 152, 22800.0 Hz
+estimated 7.99 GB RAM of available 8.15 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:58:08)
+8 NumCalc instances running at 51.40% CPU load
+1.94 GB RAM available (29.18 GB used), 4.68 GB required
+
+114/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:58:45)
+source 1, step 101, 15150.0 Hz
+estimated 4.46 GB RAM of available 5.91 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:59:01)
+7 NumCalc instances running at 43.40% CPU load
+2.21 GB RAM available (28.91 GB used), 4.68 GB required
+
+115/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:59:33)
+source 1, step 120, 18000.0 Hz
+estimated 5.54 GB RAM of available 5.61 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 15:59:48)
+7 NumCalc instances running at 45.00% CPU load
+4.49 GB RAM available (26.63 GB used), 4.68 GB required
+
+116/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 15:59:57)
+source 1, step 102, 15300.0 Hz
+estimated 4.46 GB RAM of available 5.79 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:00:12)
+7 NumCalc instances running at 44.50% CPU load
+1.58 GB RAM available (29.54 GB used), 4.81 GB required
+
+117/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:00:25)
+source 1, step 134, 20100.0 Hz
+estimated 6.34 GB RAM of available 6.59 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:00:41)
+8 NumCalc instances running at 46.70% CPU load
+1.57 GB RAM available (29.54 GB used), 4.81 GB required
+
+118/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:00:57)
+source 1, step 105, 15750.0 Hz
+estimated 4.58 GB RAM of available 5.74 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:01:13)
+8 NumCalc instances running at 48.30% CPU load
+1.38 GB RAM available (29.74 GB used), 4.81 GB required
+
+119/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:01:47)
+source 1, step 106, 15900.0 Hz
+estimated 4.80 GB RAM of available 4.83 GB required
+
+120/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:02:02)
+source 1, step 103, 15450.0 Hz
+estimated 4.58 GB RAM of available 5.18 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:02:17)
+9 NumCalc instances running at 55.00% CPU load
+0.69 GB RAM available (30.43 GB used), 5.04 GB required
+
+121/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:02:49)
+source 1, step 150, 22500.0 Hz
+estimated 7.69 GB RAM of available 7.93 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:03:04)
+8 NumCalc instances running at 50.90% CPU load
+3.35 GB RAM available (27.77 GB used), 5.04 GB required
+
+122/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:03:37)
+source 1, step 109, 16350.0 Hz
+estimated 4.80 GB RAM of available 5.19 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:03:52)
+8 NumCalc instances running at 50.00% CPU load
+0.79 GB RAM available (30.33 GB used), 5.41 GB required
+
+123/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:04:06)
+source 1, step 119, 17850.0 Hz
+estimated 5.54 GB RAM of available 5.56 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:04:21)
+8 NumCalc instances running at 47.20% CPU load
+3.18 GB RAM available (27.94 GB used), 5.41 GB required
+
+124/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:04:46)
+source 1, step 113, 16950.0 Hz
+estimated 5.16 GB RAM of available 6.28 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:05:02)
+7 NumCalc instances running at 43.20% CPU load
+1.91 GB RAM available (29.21 GB used), 5.41 GB required
+
+125/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:05:21)
+source 1, step 133, 19950.0 Hz
+estimated 6.34 GB RAM of available 6.60 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:05:36)
+8 NumCalc instances running at 50.50% CPU load
+0.62 GB RAM available (30.49 GB used), 5.41 GB required
+
+126/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:05:44)
+source 1, step 117, 17550.0 Hz
+estimated 5.16 GB RAM of available 8.33 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:05:59)
+6 NumCalc instances running at 37.20% CPU load
+3.61 GB RAM available (27.51 GB used), 5.41 GB required
+
+127/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:06:18)
+source 1, step 140, 21000.0 Hz
+estimated 7.07 GB RAM of available 7.10 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:06:34)
+7 NumCalc instances running at 38.90% CPU load
+0.63 GB RAM available (30.49 GB used), 5.41 GB required
+
+128/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:07:44)
+source 1, step 114, 17100.0 Hz
+estimated 5.16 GB RAM of available 9.19 GB required
+
+129/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:07:59)
+source 1, step 147, 22050.0 Hz
+estimated 7.52 GB RAM of available 7.57 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:08:14)
+8 NumCalc instances running at 50.90% CPU load
+0.41 GB RAM available (30.70 GB used), 5.82 GB required
+
+130/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:08:51)
+source 1, step 121, 18150.0 Hz
+estimated 5.54 GB RAM of available 6.59 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:09:06)
+7 NumCalc instances running at 45.80% CPU load
+3.39 GB RAM available (27.73 GB used), 6.23 GB required
+
+131/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:09:46)
+source 1, step 159, 23850.0 Hz
+estimated 8.49 GB RAM of available 8.78 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:10:02)
+6 NumCalc instances running at 38.50% CPU load
+2.52 GB RAM available (28.60 GB used), 6.23 GB required
+
+132/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:10:35)
+source 1, step 125, 18750.0 Hz
+estimated 5.93 GB RAM of available 7.18 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:10:50)
+6 NumCalc instances running at 37.80% CPU load
+3.54 GB RAM available (27.58 GB used), 6.23 GB required
+
+133/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:10:58)
+source 1, step 138, 20700.0 Hz
+estimated 6.78 GB RAM of available 7.02 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:11:13)
+7 NumCalc instances running at 43.80% CPU load
+0.71 GB RAM available (30.41 GB used), 6.23 GB required
+
+134/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:12:23)
+source 1, step 123, 18450.0 Hz
+estimated 5.93 GB RAM of available 9.72 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:12:38)
+6 NumCalc instances running at 36.80% CPU load
+4.05 GB RAM available (27.07 GB used), 6.23 GB required
+
+135/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:12:49)
+source 1, step 151, 22650.0 Hz
+estimated 7.69 GB RAM of available 7.81 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:13:04)
+7 NumCalc instances running at 45.90% CPU load
+0.73 GB RAM available (30.39 GB used), 6.23 GB required
+
+136/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:13:23)
+source 1, step 124, 18600.0 Hz
+estimated 5.93 GB RAM of available 6.69 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:13:38)
+7 NumCalc instances running at 42.50% CPU load
+1.06 GB RAM available (30.06 GB used), 6.23 GB required
+
+137/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:14:39)
+source 1, step 139, 20850.0 Hz
+estimated 6.78 GB RAM of available 7.14 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:14:55)
+7 NumCalc instances running at 42.00% CPU load
+0.79 GB RAM available (30.32 GB used), 6.23 GB required
+
+138/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:15:23)
+source 1, step 127, 19050.0 Hz
+estimated 5.93 GB RAM of available 7.50 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:15:38)
+7 NumCalc instances running at 42.10% CPU load
+1.83 GB RAM available (29.28 GB used), 6.23 GB required
+
+139/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:16:35)
+source 1, step 146, 21900.0 Hz
+estimated 7.52 GB RAM of available 7.57 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:16:50)
+7 NumCalc instances running at 45.60% CPU load
+1.92 GB RAM available (29.20 GB used), 6.23 GB required
+
+140/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:17:11)
+source 1, step 126, 18900.0 Hz
+estimated 5.93 GB RAM of available 7.96 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:17:27)
+6 NumCalc instances running at 37.40% CPU load
+4.23 GB RAM available (26.89 GB used), 6.23 GB required
+
+141/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:17:37)
+source 1, step 149, 22350.0 Hz
+estimated 7.52 GB RAM of available 7.82 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:17:53)
+7 NumCalc instances running at 42.50% CPU load
+0.97 GB RAM available (30.14 GB used), 6.23 GB required
+
+142/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:19:07)
+source 1, step 128, 19200.0 Hz
+estimated 5.93 GB RAM of available 7.38 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:19:22)
+6 NumCalc instances running at 38.10% CPU load
+3.7 GB RAM available (27.41 GB used), 6.5 GB required
+
+143/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:19:26)
+source 1, step 143, 21450.0 Hz
+estimated 7.22 GB RAM of available 7.46 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:19:41)
+7 NumCalc instances running at 43.20% CPU load
+0.72 GB RAM available (30.40 GB used), 6.5 GB required
+
+144/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:20:11)
+source 1, step 129, 19350.0 Hz
+estimated 6.20 GB RAM of available 7.30 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:20:26)
+6 NumCalc instances running at 38.20% CPU load
+3.56 GB RAM available (27.56 GB used), 6.5 GB required
+
+145/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:21:21)
+source 1, step 142, 21300.0 Hz
+estimated 7.22 GB RAM of available 7.26 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:21:36)
+7 NumCalc instances running at 44.20% CPU load
+1.77 GB RAM available (29.34 GB used), 6.5 GB required
+
+146/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:22:00)
+source 1, step 130, 19500.0 Hz
+estimated 6.20 GB RAM of available 7.60 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:22:16)
+7 NumCalc instances running at 43.10% CPU load
+1.73 GB RAM available (29.39 GB used), 6.5 GB required
+
+147/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:22:35)
+source 1, step 135, 20250.0 Hz
+estimated 6.62 GB RAM of available 6.73 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:22:50)
+8 NumCalc instances running at 49.10% CPU load
+4.15 GB RAM available (26.97 GB used), 6.5 GB required
+
+148/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:23:50)
+source 1, step 131, 19650.0 Hz
+estimated 6.20 GB RAM of available 9.01 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:24:06)
+6 NumCalc instances running at 38.70% CPU load
+4.19 GB RAM available (26.93 GB used), 6.66 GB required
+
+149/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:24:16)
+source 1, step 145, 21750.0 Hz
+estimated 7.22 GB RAM of available 8.08 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:24:31)
+7 NumCalc instances running at 43.60% CPU load
+1.23 GB RAM available (29.89 GB used), 6.66 GB required
+
+150/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:25:20)
+source 1, step 132, 19800.0 Hz
+estimated 6.34 GB RAM of available 7.33 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:25:35)
+6 NumCalc instances running at 36.60% CPU load
+3.58 GB RAM available (27.53 GB used), 7.12 GB required
+
+151/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:26:06)
+source 1, step 141, 21150.0 Hz
+estimated 7.22 GB RAM of available 7.46 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:26:21)
+7 NumCalc instances running at 44.60% CPU load
+0.77 GB RAM available (30.35 GB used), 7.12 GB required
+
+152/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:27:09)
+source 1, step 137, 20550.0 Hz
+estimated 6.78 GB RAM of available 7.21 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:27:25)
+6 NumCalc instances running at 38.70% CPU load
+3.59 GB RAM available (27.53 GB used), 7.12 GB required
+
+153/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:27:39)
+source 1, step 136, 20400.0 Hz
+estimated 6.78 GB RAM of available 7.15 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:27:54)
+7 NumCalc instances running at 43.20% CPU load
+0.77 GB RAM available (30.35 GB used), 8.58 GB required
+
+154/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:28:59)
+source 1, step 153, 22950.0 Hz
+estimated 8.17 GB RAM of available 9.30 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:29:14)
+6 NumCalc instances running at 36.30% CPU load
+1.54 GB RAM available (29.58 GB used), 8.58 GB required
+
+155/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:30:01)
+source 1, step 157, 23550.0 Hz
+estimated 8.49 GB RAM of available 10.01 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:30:16)
+6 NumCalc instances running at 38.70% CPU load
+4.29 GB RAM available (26.83 GB used), 8.58 GB required
+
+156/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:31:30)
+source 1, step 155, 23250.0 Hz
+estimated 8.17 GB RAM of available 11.29 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:31:45)
+6 NumCalc instances running at 39.80% CPU load
+3.5 GB RAM available (27.62 GB used), 8.58 GB required
+
+157/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:32:31)
+source 1, step 5, 750.0 Hz
+estimated 10.61 GB RAM of available 11.13 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:32:46)
+5 NumCalc instances running at 30.70% CPU load
+3.51 GB RAM available (27.61 GB used), 8.58 GB required
+
+158/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:33:54)
+source 1, step 154, 23100.0 Hz
+estimated 8.17 GB RAM of available 10.79 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:34:10)
+5 NumCalc instances running at 30.40% CPU load
+3.01 GB RAM available (28.10 GB used), 8.58 GB required
+
+159/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:36:18)
+source 1, step 4, 600.0 Hz
+estimated 10.61 GB RAM of available 10.75 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:36:34)
+5 NumCalc instances running at 31.00% CPU load
+0.9 GB RAM available (30.22 GB used), 8.58 GB required
+
+160/160 starting instance from 'myHRTF_project_L' (Aug 26 2024, 16:43:53)
+source 1, step 156, 23400.0 Hz
+estimated 8.17 GB RAM of available 16.32 GB required
+
+
+Started 'myHRTF_project_R' project (2/2, Aug 26 2024, 16:44:09)
+---------------------------------------------------------------
+Running 160/160 unfinished frequency steps in the project
+
+1/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:44:09)
+source 1, step 1, 150.0 Hz
+estimated 10.57 GB RAM of available 10.64 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:44:24)
+3 NumCalc instances running at 17.90% CPU load
+1.22 GB RAM available (29.89 GB used), 2.5 GB required
+
+2/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:46:29)
+source 1, step 7, 1050.0 Hz
+estimated 2.38 GB RAM of available 6.27 GB required
+
+3/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:46:44)
+source 1, step 90, 13500.0 Hz
+estimated 3.94 GB RAM of available 3.96 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:46:59)
+5 NumCalc instances running at 32.10% CPU load
+1.0 GB RAM available (30.12 GB used), 2.5 GB required
+
+4/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:47:33)
+source 1, step 8, 1200.0 Hz
+estimated 2.38 GB RAM of available 3.70 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:47:48)
+6 NumCalc instances running at 35.70% CPU load
+2.18 GB RAM available (28.94 GB used), 2.5 GB required
+
+5/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:48:54)
+source 1, step 70, 10500.0 Hz
+estimated 3.08 GB RAM of available 3.24 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:49:09)
+6 NumCalc instances running at 36.00% CPU load
+1.82 GB RAM available (29.30 GB used), 2.5 GB required
+
+6/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:49:34)
+source 1, step 6, 900.0 Hz
+estimated 2.38 GB RAM of available 4.28 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:49:49)
+7 NumCalc instances running at 45.00% CPU load
+1.79 GB RAM available (29.33 GB used), 2.5 GB required
+
+7/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:50:14)
+source 1, step 150, 22500.0 Hz
+estimated 7.93 GB RAM of available 8.03 GB required
+
+8/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:50:30)
+source 1, step 13, 1950.0 Hz
+estimated 2.38 GB RAM of available 5.52 GB required
+
+9/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:50:45)
+source 1, step 86, 12900.0 Hz
+estimated 3.75 GB RAM of available 3.80 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:51:00)
+7 NumCalc instances running at 43.80% CPU load
+1.78 GB RAM available (29.33 GB used), 2.5 GB required
+
+10/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:51:29)
+source 1, step 12, 1800.0 Hz
+estimated 2.38 GB RAM of available 4.01 GB required
+
+11/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:51:44)
+source 1, step 81, 12150.0 Hz
+estimated 3.58 GB RAM of available 3.64 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:51:59)
+8 NumCalc instances running at 48.60% CPU load
+0.57 GB RAM available (30.55 GB used), 2.5 GB required
+
+12/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:52:23)
+source 1, step 11, 1650.0 Hz
+estimated 2.38 GB RAM of available 2.81 GB required
+
+13/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:52:38)
+source 1, step 72, 10800.0 Hz
+estimated 3.32 GB RAM of available 3.34 GB required
+
+14/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:52:53)
+source 1, step 10, 1500.0 Hz
+estimated 2.38 GB RAM of available 4.52 GB required
+
+15/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:53:09)
+source 1, step 69, 10350.0 Hz
+estimated 3.08 GB RAM of available 3.31 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:53:24)
+9 NumCalc instances running at 53.60% CPU load
+0.9 GB RAM available (30.22 GB used), 2.5 GB required
+
+16/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:54:07)
+source 1, step 9, 1350.0 Hz
+estimated 2.38 GB RAM of available 6.16 GB required
+
+17/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:54:23)
+source 1, step 110, 16500.0 Hz
+estimated 5.15 GB RAM of available 5.16 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:54:38)
+10 NumCalc instances running at 62.80% CPU load
+0.73 GB RAM available (30.39 GB used), 2.5 GB required
+
+18/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:54:47)
+source 1, step 15, 2250.0 Hz
+estimated 2.38 GB RAM of available 2.89 GB required
+
+19/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:55:03)
+source 1, step 80, 12000.0 Hz
+estimated 3.48 GB RAM of available 3.63 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:55:18)
+10 NumCalc instances running at 56.20% CPU load
+2.34 GB RAM available (28.78 GB used), 2.5 GB required
+
+20/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:55:28)
+source 1, step 14, 2100.0 Hz
+estimated 2.38 GB RAM of available 4.20 GB required
+
+21/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:55:44)
+source 1, step 87, 13050.0 Hz
+estimated 3.75 GB RAM of available 3.81 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:55:59)
+10 NumCalc instances running at 56.90% CPU load
+2.44 GB RAM available (28.68 GB used), 2.5 GB required
+
+22/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:56:01)
+source 1, step 16, 2400.0 Hz
+estimated 2.38 GB RAM of available 4.35 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:56:16)
+11 NumCalc instances running at 62.30% CPU load
+1.31 GB RAM available (29.81 GB used), 2.5 GB required
+
+23/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:56:46)
+source 1, step 65, 9750.0 Hz
+estimated 2.94 GB RAM of available 3.06 GB required
+
+24/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:57:02)
+source 1, step 21, 3150.0 Hz
+estimated 2.38 GB RAM of available 2.56 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:57:17)
+10 NumCalc instances running at 53.60% CPU load
+0.54 GB RAM available (30.58 GB used), 2.5 GB required
+
+25/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:57:31)
+source 1, step 42, 6300.0 Hz
+estimated 2.47 GB RAM of available 2.55 GB required
+
+26/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:57:47)
+source 1, step 20, 3000.0 Hz
+estimated 2.38 GB RAM of available 7.03 GB required
+
+27/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:58:02)
+source 1, step 140, 21000.0 Hz
+estimated 7.18 GB RAM of available 7.31 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:58:17)
+12 NumCalc instances running at 61.70% CPU load
+1.63 GB RAM available (29.49 GB used), 2.5 GB required
+
+28/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:58:22)
+source 1, step 19, 2850.0 Hz
+estimated 2.38 GB RAM of available 2.65 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:58:37)
+12 NumCalc instances running at 45.50% CPU load
+0.31 GB RAM available (30.81 GB used), 2.5 GB required
+
+29/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:58:49)
+source 1, step 92, 13800.0 Hz
+estimated 4.04 GB RAM of available 4.09 GB required
+
+30/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 16:59:04)
+source 1, step 18, 2700.0 Hz
+estimated 2.38 GB RAM of available 2.69 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 16:59:19)
+11 NumCalc instances running at 54.00% CPU load
+0.49 GB RAM available (30.63 GB used), 2.5 GB required
+
+31/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:00:20)
+source 1, step 39, 5850.0 Hz
+estimated 2.47 GB RAM of available 2.54 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:00:35)
+8 NumCalc instances running at 51.30% CPU load
+2.03 GB RAM available (29.09 GB used), 2.5 GB required
+
+32/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:00:36)
+source 1, step 17, 2550.0 Hz
+estimated 2.38 GB RAM of available 2.67 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:00:52)
+7 NumCalc instances running at 30.70% CPU load
+0.39 GB RAM available (30.73 GB used), 2.5 GB required
+
+33/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:01:06)
+source 1, step 91, 13650.0 Hz
+estimated 4.04 GB RAM of available 4.12 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:01:22)
+7 NumCalc instances running at 37.40% CPU load
+1.02 GB RAM available (30.10 GB used), 2.5 GB required
+
+34/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:02:05)
+source 1, step 25, 3750.0 Hz
+estimated 2.38 GB RAM of available 6.22 GB required
+
+35/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:02:20)
+source 1, step 126, 18900.0 Hz
+estimated 6.05 GB RAM of available 6.24 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:02:35)
+8 NumCalc instances running at 46.50% CPU load
+0.84 GB RAM available (30.28 GB used), 2.5 GB required
+
+36/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:03:03)
+source 1, step 26, 3900.0 Hz
+estimated 2.38 GB RAM of available 2.91 GB required
+
+37/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:03:18)
+source 1, step 151, 22650.0 Hz
+estimated 8.09 GB RAM of available 8.27 GB required
+
+38/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:03:33)
+source 1, step 27, 4050.0 Hz
+estimated 2.38 GB RAM of available 5.24 GB required
+
+39/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:03:48)
+source 1, step 100, 15000.0 Hz
+estimated 4.44 GB RAM of available 4.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:04:03)
+8 NumCalc instances running at 47.70% CPU load
+1.66 GB RAM available (29.45 GB used), 2.5 GB required
+
+40/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:04:20)
+source 1, step 28, 4200.0 Hz
+estimated 2.38 GB RAM of available 3.65 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:04:35)
+9 NumCalc instances running at 54.10% CPU load
+1.0 GB RAM available (30.12 GB used), 2.5 GB required
+
+41/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:04:59)
+source 1, step 58, 8700.0 Hz
+estimated 2.81 GB RAM of available 2.84 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:05:15)
+9 NumCalc instances running at 51.70% CPU load
+1.45 GB RAM available (29.67 GB used), 2.5 GB required
+
+42/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:05:47)
+source 1, step 29, 4350.0 Hz
+estimated 2.38 GB RAM of available 3.57 GB required
+
+43/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:06:03)
+source 1, step 120, 18000.0 Hz
+estimated 5.50 GB RAM of available 5.55 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:06:18)
+9 NumCalc instances running at 53.40% CPU load
+2.46 GB RAM available (28.66 GB used), 2.5 GB required
+
+44/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:06:24)
+source 1, step 22, 3300.0 Hz
+estimated 2.38 GB RAM of available 2.52 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:06:39)
+8 NumCalc instances running at 50.00% CPU load
+1.18 GB RAM available (29.94 GB used), 2.5 GB required
+
+45/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:07:01)
+source 1, step 74, 11100.0 Hz
+estimated 3.32 GB RAM of available 3.34 GB required
+
+46/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:07:16)
+source 1, step 23, 3450.0 Hz
+estimated 2.38 GB RAM of available 6.99 GB required
+
+47/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:07:31)
+source 1, step 108, 16200.0 Hz
+estimated 4.92 GB RAM of available 4.92 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:07:46)
+10 NumCalc instances running at 62.20% CPU load
+1.91 GB RAM available (29.21 GB used), 2.5 GB required
+
+48/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:07:51)
+source 1, step 24, 3600.0 Hz
+estimated 2.38 GB RAM of available 3.63 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:08:06)
+11 NumCalc instances running at 19.30% CPU load
+0.82 GB RAM available (30.30 GB used), 2.5 GB required
+
+49/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:08:26)
+source 1, step 64, 9600.0 Hz
+estimated 2.94 GB RAM of available 2.99 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:08:41)
+10 NumCalc instances running at 62.20% CPU load
+2.05 GB RAM available (29.07 GB used), 2.5 GB required
+
+50/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:08:54)
+source 1, step 31, 4650.0 Hz
+estimated 2.38 GB RAM of available 2.89 GB required
+
+51/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:09:09)
+source 1, step 88, 13200.0 Hz
+estimated 3.94 GB RAM of available 3.98 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:09:24)
+9 NumCalc instances running at 56.20% CPU load
+1.72 GB RAM available (29.40 GB used), 2.5 GB required
+
+52/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:09:33)
+source 1, step 30, 4500.0 Hz
+estimated 2.38 GB RAM of available 5.17 GB required
+
+53/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:09:48)
+source 1, step 78, 11700.0 Hz
+estimated 3.48 GB RAM of available 3.52 GB required
+
+54/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:10:03)
+source 1, step 32, 4800.0 Hz
+estimated 2.38 GB RAM of available 2.73 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:10:18)
+11 NumCalc instances running at 53.60% CPU load
+1.47 GB RAM available (29.65 GB used), 2.5 GB required
+
+55/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:10:22)
+source 1, step 62, 9300.0 Hz
+estimated 2.94 GB RAM of available 2.97 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:10:37)
+11 NumCalc instances running at 59.10% CPU load
+1.81 GB RAM available (29.31 GB used), 2.5 GB required
+
+56/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:10:43)
+source 1, step 37, 5550.0 Hz
+estimated 2.38 GB RAM of available 3.30 GB required
+
+57/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:10:58)
+source 1, step 79, 11850.0 Hz
+estimated 3.48 GB RAM of available 3.61 GB required
+
+58/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:11:14)
+source 1, step 36, 5400.0 Hz
+estimated 2.38 GB RAM of available 3.50 GB required
+
+59/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:11:29)
+source 1, step 54, 8100.0 Hz
+estimated 2.68 GB RAM of available 2.72 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:11:44)
+13 NumCalc instances running at 62.30% CPU load
+0.69 GB RAM available (30.43 GB used), 2.5 GB required
+
+60/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:12:00)
+source 1, step 35, 5250.0 Hz
+estimated 2.38 GB RAM of available 3.81 GB required
+
+61/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:12:15)
+source 1, step 99, 14850.0 Hz
+estimated 4.44 GB RAM of available 4.45 GB required
+
+62/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:12:30)
+source 1, step 34, 5100.0 Hz
+estimated 2.38 GB RAM of available 3.43 GB required
+
+63/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:12:45)
+source 1, step 40, 6000.0 Hz
+estimated 2.47 GB RAM of available 2.51 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:13:01)
+11 NumCalc instances running at 67.60% CPU load
+2.18 GB RAM available (28.94 GB used), 2.5 GB required
+
+64/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:13:06)
+source 1, step 33, 4950.0 Hz
+estimated 2.38 GB RAM of available 4.02 GB required
+
+65/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:13:21)
+source 1, step 66, 9900.0 Hz
+estimated 3.08 GB RAM of available 3.14 GB required
+
+66/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:13:36)
+source 1, step 38, 5700.0 Hz
+estimated 2.38 GB RAM of available 3.34 GB required
+
+67/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:13:51)
+source 1, step 118, 17700.0 Hz
+estimated 5.50 GB RAM of available 5.58 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:14:06)
+10 NumCalc instances running at 61.30% CPU load
+1.08 GB RAM available (30.03 GB used), 2.6 GB required
+
+68/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:14:07)
+source 1, step 41, 6150.0 Hz
+estimated 2.47 GB RAM of available 2.80 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:14:23)
+11 NumCalc instances running at 67.60% CPU load
+0.58 GB RAM available (30.54 GB used), 2.6 GB required
+
+69/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:14:33)
+source 1, step 55, 8250.0 Hz
+estimated 2.81 GB RAM of available 2.93 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:14:49)
+9 NumCalc instances running at 57.10% CPU load
+2.32 GB RAM available (28.80 GB used), 2.6 GB required
+
+70/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:15:02)
+source 1, step 43, 6450.0 Hz
+estimated 2.47 GB RAM of available 3.73 GB required
+
+71/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:15:17)
+source 1, step 107, 16050.0 Hz
+estimated 4.92 GB RAM of available 5.17 GB required
+
+72/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:15:32)
+source 1, step 45, 6750.0 Hz
+estimated 2.57 GB RAM of available 3.16 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:15:47)
+9 NumCalc instances running at 55.50% CPU load
+2.43 GB RAM available (28.69 GB used), 2.7 GB required
+
+73/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:15:52)
+source 1, step 94, 14100.0 Hz
+estimated 4.23 GB RAM of available 4.38 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:16:07)
+10 NumCalc instances running at 58.20% CPU load
+2.03 GB RAM available (29.09 GB used), 2.7 GB required
+
+74/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:16:20)
+source 1, step 44, 6600.0 Hz
+estimated 2.57 GB RAM of available 2.90 GB required
+
+75/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:16:36)
+source 1, step 84, 12600.0 Hz
+estimated 3.75 GB RAM of available 3.86 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:16:51)
+10 NumCalc instances running at 57.90% CPU load
+0.37 GB RAM available (30.75 GB used), 2.7 GB required
+
+76/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:16:58)
+source 1, step 49, 7350.0 Hz
+estimated 2.57 GB RAM of available 5.58 GB required
+
+77/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:17:13)
+source 1, step 96, 14400.0 Hz
+estimated 4.23 GB RAM of available 4.54 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:17:28)
+10 NumCalc instances running at 61.30% CPU load
+0.7 GB RAM available (30.42 GB used), 2.7 GB required
+
+78/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:17:40)
+source 1, step 46, 6900.0 Hz
+estimated 2.57 GB RAM of available 2.84 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:17:56)
+9 NumCalc instances running at 53.20% CPU load
+1.52 GB RAM available (29.59 GB used), 2.7 GB required
+
+79/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:18:04)
+source 1, step 52, 7800.0 Hz
+estimated 2.68 GB RAM of available 2.71 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:18:19)
+10 NumCalc instances running at 66.40% CPU load
+0.56 GB RAM available (30.56 GB used), 2.7 GB required
+
+80/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:18:22)
+source 1, step 47, 7050.0 Hz
+estimated 2.57 GB RAM of available 3.64 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:18:37)
+10 NumCalc instances running at 63.80% CPU load
+1.67 GB RAM available (29.45 GB used), 2.7 GB required
+
+81/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:18:39)
+source 1, step 95, 14250.0 Hz
+estimated 4.23 GB RAM of available 4.25 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:18:54)
+11 NumCalc instances running at 67.00% CPU load
+2.21 GB RAM available (28.91 GB used), 2.7 GB required
+
+82/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:19:14)
+source 1, step 48, 7200.0 Hz
+estimated 2.57 GB RAM of available 4.90 GB required
+
+83/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:19:29)
+source 1, step 89, 13350.0 Hz
+estimated 3.94 GB RAM of available 4.04 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:19:44)
+11 NumCalc instances running at 64.50% CPU load
+2.04 GB RAM available (29.08 GB used), 2.82 GB required
+
+84/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:19:46)
+source 1, step 53, 7950.0 Hz
+estimated 2.68 GB RAM of available 2.87 GB required
+
+85/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:20:02)
+source 1, step 71, 10650.0 Hz
+estimated 3.32 GB RAM of available 3.39 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:20:17)
+11 NumCalc instances running at 65.50% CPU load
+2.51 GB RAM available (28.61 GB used), 2.82 GB required
+
+86/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:20:19)
+source 1, step 50, 7500.0 Hz
+estimated 2.68 GB RAM of available 4.11 GB required
+
+87/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:20:34)
+source 1, step 109, 16350.0 Hz
+estimated 4.92 GB RAM of available 5.19 GB required
+
+88/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:20:50)
+source 1, step 51, 7650.0 Hz
+estimated 2.68 GB RAM of available 2.83 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:21:05)
+10 NumCalc instances running at 63.50% CPU load
+1.46 GB RAM available (29.66 GB used), 2.95 GB required
+
+89/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:21:24)
+source 1, step 102, 15300.0 Hz
+estimated 4.55 GB RAM of available 4.75 GB required
+
+90/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:21:39)
+source 1, step 57, 8550.0 Hz
+estimated 2.81 GB RAM of available 3.50 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:21:54)
+10 NumCalc instances running at 62.20% CPU load
+0.91 GB RAM available (30.21 GB used), 2.95 GB required
+
+91/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:22:11)
+source 1, step 98, 14700.0 Hz
+estimated 4.23 GB RAM of available 4.24 GB required
+
+92/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:22:26)
+source 1, step 59, 8850.0 Hz
+estimated 2.81 GB RAM of available 3.60 GB required
+
+93/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:22:41)
+source 1, step 67, 10050.0 Hz
+estimated 3.08 GB RAM of available 3.13 GB required
+
+94/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:22:56)
+source 1, step 56, 8400.0 Hz
+estimated 2.81 GB RAM of available 3.15 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:23:12)
+11 NumCalc instances running at 60.00% CPU load
+1.74 GB RAM available (29.38 GB used), 3.09 GB required
+
+95/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:23:19)
+source 1, step 68, 10200.0 Hz
+estimated 3.08 GB RAM of available 3.18 GB required
+
+96/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:23:34)
+source 1, step 61, 9150.0 Hz
+estimated 2.94 GB RAM of available 6.31 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:23:49)
+9 NumCalc instances running at 55.80% CPU load
+3.03 GB RAM available (28.08 GB used), 3.09 GB required
+
+97/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:24:07)
+source 1, step 83, 12450.0 Hz
+estimated 3.75 GB RAM of available 3.98 GB required
+
+98/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:24:22)
+source 1, step 60, 9000.0 Hz
+estimated 2.94 GB RAM of available 3.59 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:24:38)
+10 NumCalc instances running at 62.60% CPU load
+2.26 GB RAM available (28.86 GB used), 3.09 GB required
+
+99/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:24:55)
+source 1, step 103, 15450.0 Hz
+estimated 4.55 GB RAM of available 4.74 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:25:11)
+11 NumCalc instances running at 68.10% CPU load
+2.04 GB RAM available (29.08 GB used), 3.09 GB required
+
+100/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:25:22)
+source 1, step 63, 9450.0 Hz
+estimated 2.94 GB RAM of available 3.98 GB required
+
+101/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:25:37)
+source 1, step 114, 17100.0 Hz
+estimated 5.27 GB RAM of available 5.44 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:25:52)
+11 NumCalc instances running at 65.80% CPU load
+1.88 GB RAM available (29.24 GB used), 3.48 GB required
+
+102/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:26:04)
+source 1, step 73, 10950.0 Hz
+estimated 3.32 GB RAM of available 3.79 GB required
+
+103/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:26:19)
+source 1, step 77, 11550.0 Hz
+estimated 3.48 GB RAM of available 3.70 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:26:34)
+8 NumCalc instances running at 49.60% CPU load
+3.42 GB RAM available (27.70 GB used), 3.48 GB required
+
+104/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:26:42)
+source 1, step 75, 11250.0 Hz
+estimated 3.32 GB RAM of available 4.24 GB required
+
+105/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:26:58)
+source 1, step 112, 16800.0 Hz
+estimated 5.27 GB RAM of available 5.47 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:27:13)
+9 NumCalc instances running at 57.10% CPU load
+0.79 GB RAM available (30.33 GB used), 3.48 GB required
+
+106/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:27:46)
+source 1, step 76, 11400.0 Hz
+estimated 3.32 GB RAM of available 4.22 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:28:01)
+9 NumCalc instances running at 55.80% CPU load
+2.51 GB RAM available (28.61 GB used), 3.94 GB required
+
+107/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:28:31)
+source 1, step 97, 14550.0 Hz
+estimated 4.23 GB RAM of available 4.50 GB required
+
+108/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:28:46)
+source 1, step 85, 12750.0 Hz
+estimated 3.75 GB RAM of available 6.42 GB required
+
+109/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:29:01)
+source 1, step 106, 15900.0 Hz
+estimated 4.77 GB RAM of available 5.01 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:29:16)
+10 NumCalc instances running at 66.30% CPU load
+2.79 GB RAM available (28.33 GB used), 3.94 GB required
+
+110/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:29:37)
+source 1, step 82, 12300.0 Hz
+estimated 3.75 GB RAM of available 5.24 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:29:52)
+9 NumCalc instances running at 56.50% CPU load
+1.51 GB RAM available (29.61 GB used), 4.45 GB required
+
+111/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:30:01)
+source 1, step 121, 18150.0 Hz
+estimated 5.88 GB RAM of available 5.92 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:30:16)
+8 NumCalc instances running at 50.00% CPU load
+1.33 GB RAM available (29.79 GB used), 4.45 GB required
+
+112/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:30:57)
+source 1, step 93, 13950.0 Hz
+estimated 4.23 GB RAM of available 4.67 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:31:12)
+8 NumCalc instances running at 47.70% CPU load
+3.48 GB RAM available (27.64 GB used), 4.78 GB required
+
+113/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:31:27)
+source 1, step 136, 20400.0 Hz
+estimated 6.72 GB RAM of available 6.82 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:31:42)
+8 NumCalc instances running at 49.10% CPU load
+0.73 GB RAM available (30.39 GB used), 4.78 GB required
+
+114/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:32:17)
+source 1, step 101, 15150.0 Hz
+estimated 4.55 GB RAM of available 6.09 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:32:32)
+8 NumCalc instances running at 49.50% CPU load
+3.16 GB RAM available (27.95 GB used), 5.01 GB required
+
+115/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:32:45)
+source 1, step 119, 17850.0 Hz
+estimated 5.50 GB RAM of available 5.67 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:33:00)
+7 NumCalc instances running at 42.90% CPU load
+0.73 GB RAM available (30.39 GB used), 5.01 GB required
+
+116/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:33:30)
+source 1, step 105, 15750.0 Hz
+estimated 4.77 GB RAM of available 5.59 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:33:45)
+7 NumCalc instances running at 43.90% CPU load
+4.05 GB RAM available (27.06 GB used), 5.01 GB required
+
+117/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:34:13)
+source 1, step 111, 16650.0 Hz
+estimated 5.27 GB RAM of available 5.30 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:34:28)
+7 NumCalc instances running at 43.00% CPU load
+0.53 GB RAM available (30.59 GB used), 5.01 GB required
+
+118/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:35:23)
+source 1, step 104, 15600.0 Hz
+estimated 4.77 GB RAM of available 7.33 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:35:38)
+7 NumCalc instances running at 44.60% CPU load
+4.09 GB RAM available (27.02 GB used), 5.53 GB required
+
+119/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:36:04)
+source 1, step 142, 21300.0 Hz
+estimated 7.33 GB RAM of available 7.57 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:36:19)
+8 NumCalc instances running at 50.40% CPU load
+3.73 GB RAM available (27.39 GB used), 5.53 GB required
+
+120/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:37:15)
+source 1, step 113, 16950.0 Hz
+estimated 5.27 GB RAM of available 8.81 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:37:30)
+7 NumCalc instances running at 42.70% CPU load
+5.18 GB RAM available (25.93 GB used), 5.78 GB required
+
+121/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:38:14)
+source 1, step 131, 19650.0 Hz
+estimated 6.45 GB RAM of available 6.67 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:38:29)
+7 NumCalc instances running at 43.20% CPU load
+3.58 GB RAM available (27.54 GB used), 5.78 GB required
+
+122/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:38:49)
+source 1, step 117, 17550.0 Hz
+estimated 5.50 GB RAM of available 7.46 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:39:05)
+6 NumCalc instances running at 37.80% CPU load
+2.0 GB RAM available (29.12 GB used), 5.78 GB required
+
+123/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:39:33)
+source 1, step 130, 19500.0 Hz
+estimated 6.31 GB RAM of available 6.55 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:39:48)
+6 NumCalc instances running at 36.80% CPU load
+2.55 GB RAM available (28.56 GB used), 5.78 GB required
+
+124/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:40:20)
+source 1, step 115, 17250.0 Hz
+estimated 5.50 GB RAM of available 5.88 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:40:35)
+6 NumCalc instances running at 37.80% CPU load
+2.5 GB RAM available (28.62 GB used), 5.78 GB required
+
+125/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:41:44)
+source 1, step 124, 18600.0 Hz
+estimated 6.05 GB RAM of available 6.13 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:41:59)
+7 NumCalc instances running at 44.60% CPU load
+0.76 GB RAM available (30.36 GB used), 5.78 GB required
+
+126/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:42:59)
+source 1, step 116, 17400.0 Hz
+estimated 5.50 GB RAM of available 9.64 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:43:15)
+7 NumCalc instances running at 43.60% CPU load
+4.37 GB RAM available (26.75 GB used), 6.35 GB required
+
+127/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:43:37)
+source 1, step 144, 21600.0 Hz
+estimated 7.62 GB RAM of available 7.87 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:43:52)
+7 NumCalc instances running at 44.20% CPU load
+3.04 GB RAM available (28.08 GB used), 6.35 GB required
+
+128/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:45:10)
+source 1, step 125, 18750.0 Hz
+estimated 6.05 GB RAM of available 6.83 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:45:26)
+6 NumCalc instances running at 35.70% CPU load
+4.87 GB RAM available (26.25 GB used), 6.35 GB required
+
+129/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:46:02)
+source 1, step 152, 22800.0 Hz
+estimated 8.28 GB RAM of available 8.29 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:46:17)
+7 NumCalc instances running at 46.20% CPU load
+0.7 GB RAM available (30.42 GB used), 6.35 GB required
+
+130/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:47:07)
+source 1, step 122, 18300.0 Hz
+estimated 6.05 GB RAM of available 9.20 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:47:23)
+6 NumCalc instances running at 39.40% CPU load
+3.36 GB RAM available (27.76 GB used), 6.35 GB required
+
+131/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:48:35)
+source 1, step 160, 24000.0 Hz
+estimated 8.92 GB RAM of available 9.09 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:48:50)
+5 NumCalc instances running at 30.30% CPU load
+2.38 GB RAM available (28.74 GB used), 6.35 GB required
+
+132/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:49:37)
+source 1, step 123, 18450.0 Hz
+estimated 6.05 GB RAM of available 7.50 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:49:52)
+6 NumCalc instances running at 36.70% CPU load
+1.73 GB RAM available (29.39 GB used), 6.62 GB required
+
+133/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:51:40)
+source 1, step 137, 20550.0 Hz
+estimated 6.90 GB RAM of available 7.18 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:51:56)
+5 NumCalc instances running at 31.20% CPU load
+3.37 GB RAM available (27.75 GB used), 6.62 GB required
+
+134/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:52:29)
+source 1, step 127, 19050.0 Hz
+estimated 6.31 GB RAM of available 8.91 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:52:45)
+6 NumCalc instances running at 38.20% CPU load
+2.9 GB RAM available (28.22 GB used), 6.62 GB required
+
+135/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:53:05)
+source 1, step 129, 19350.0 Hz
+estimated 6.31 GB RAM of available 6.69 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:53:20)
+7 NumCalc instances running at 44.00% CPU load
+1.05 GB RAM available (30.06 GB used), 6.62 GB required
+
+136/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:55:12)
+source 1, step 128, 19200.0 Hz
+estimated 6.31 GB RAM of available 9.72 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:55:27)
+6 NumCalc instances running at 36.90% CPU load
+3.69 GB RAM available (27.43 GB used), 7.06 GB required
+
+137/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:55:57)
+source 1, step 146, 21900.0 Hz
+estimated 7.62 GB RAM of available 7.64 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:56:12)
+6 NumCalc instances running at 35.70% CPU load
+3.14 GB RAM available (27.98 GB used), 7.06 GB required
+
+138/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:56:24)
+source 1, step 132, 19800.0 Hz
+estimated 6.72 GB RAM of available 7.10 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:56:39)
+7 NumCalc instances running at 43.00% CPU load
+1.1 GB RAM available (30.02 GB used), 7.06 GB required
+
+139/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:58:37)
+source 1, step 134, 20100.0 Hz
+estimated 6.72 GB RAM of available 7.07 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:58:52)
+7 NumCalc instances running at 40.00% CPU load
+0.96 GB RAM available (30.16 GB used), 7.06 GB required
+
+140/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:59:40)
+source 1, step 133, 19950.0 Hz
+estimated 6.72 GB RAM of available 11.62 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 17:59:55)
+5 NumCalc instances running at 32.70% CPU load
+5.22 GB RAM available (25.90 GB used), 7.06 GB required
+
+141/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 17:59:56)
+source 1, step 158, 23700.0 Hz
+estimated 8.60 GB RAM of available 9.45 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:00:12)
+6 NumCalc instances running at 37.60% CPU load
+1.25 GB RAM available (29.86 GB used), 7.06 GB required
+
+142/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:01:58)
+source 1, step 135, 20250.0 Hz
+estimated 6.72 GB RAM of available 7.40 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:02:13)
+6 NumCalc instances running at 38.40% CPU load
+0.99 GB RAM available (30.13 GB used), 7.54 GB required
+
+143/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:03:57)
+source 1, step 3, 450.0 Hz
+estimated 10.57 GB RAM of available 12.73 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:04:12)
+6 NumCalc instances running at 36.80% CPU load
+2.83 GB RAM available (28.29 GB used), 7.54 GB required
+
+144/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:05:29)
+source 1, step 139, 20850.0 Hz
+estimated 7.18 GB RAM of available 9.53 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:05:44)
+5 NumCalc instances running at 29.50% CPU load
+4.87 GB RAM available (26.25 GB used), 7.54 GB required
+
+145/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:08:44)
+source 1, step 2, 300.0 Hz
+estimated 10.57 GB RAM of available 11.50 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:09:00)
+5 NumCalc instances running at 28.90% CPU load
+1.67 GB RAM available (29.44 GB used), 7.54 GB required
+
+146/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:12:34)
+source 1, step 138, 20700.0 Hz
+estimated 7.18 GB RAM of available 8.71 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:12:49)
+3 NumCalc instances running at 18.20% CPU load
+1.9 GB RAM available (29.22 GB used), 7.7 GB required
+
+147/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:19:29)
+source 1, step 159, 23850.0 Hz
+estimated 8.60 GB RAM of available 8.63 GB required
+
+148/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:19:44)
+source 1, step 141, 21150.0 Hz
+estimated 7.33 GB RAM of available 10.34 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:19:59)
+3 NumCalc instances running at 21.90% CPU load
+3.33 GB RAM available (27.79 GB used), 8.0 GB required
+
+149/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:22:18)
+source 1, step 5, 750.0 Hz
+estimated 10.57 GB RAM of available 11.15 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:22:33)
+3 NumCalc instances running at 18.40% CPU load
+3.39 GB RAM available (27.73 GB used), 8.0 GB required
+
+150/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:22:34)
+source 1, step 145, 21750.0 Hz
+estimated 7.62 GB RAM of available 8.73 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:22:50)
+4 NumCalc instances running at 29.20% CPU load
+6.06 GB RAM available (25.06 GB used), 8.0 GB required
+
+151/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:25:38)
+source 1, step 4, 600.0 Hz
+estimated 10.57 GB RAM of available 10.81 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:25:53)
+5 NumCalc instances running at 30.60% CPU load
+0.94 GB RAM available (30.18 GB used), 8.0 GB required
+
+152/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:29:59)
+source 1, step 147, 22050.0 Hz
+estimated 7.62 GB RAM of available 8.69 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:30:14)
+3 NumCalc instances running at 19.80% CPU load
+1.43 GB RAM available (29.69 GB used), 8.0 GB required
+
+153/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:37:20)
+source 1, step 156, 23400.0 Hz
+estimated 8.60 GB RAM of available 8.63 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:37:35)
+3 NumCalc instances running at 18.10% CPU load
+0.7 GB RAM available (30.42 GB used), 8.0 GB required
+
+154/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:38:25)
+source 1, step 148, 22200.0 Hz
+estimated 7.62 GB RAM of available 8.50 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:38:40)
+3 NumCalc instances running at 18.80% CPU load
+3.3 GB RAM available (27.81 GB used), 8.0 GB required
+
+155/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:38:41)
+source 1, step 155, 23250.0 Hz
+estimated 8.60 GB RAM of available 11.13 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:38:56)
+3 NumCalc instances running at 17.70% CPU load
+5.02 GB RAM available (26.10 GB used), 8.0 GB required
+
+156/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:40:41)
+source 1, step 143, 21450.0 Hz
+estimated 7.62 GB RAM of available 10.30 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:40:56)
+4 NumCalc instances running at 25.70% CPU load
+3.04 GB RAM available (28.08 GB used), 8.32 GB required
+
+157/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:42:16)
+source 1, step 154, 23100.0 Hz
+estimated 8.60 GB RAM of available 13.13 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:42:32)
+5 NumCalc instances running at 31.20% CPU load
+4.94 GB RAM available (26.17 GB used), 8.32 GB required
+
+158/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:43:48)
+source 1, step 149, 22350.0 Hz
+estimated 7.93 GB RAM of available 9.70 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:44:03)
+6 NumCalc instances running at 38.10% CPU load
+2.18 GB RAM available (28.94 GB used), 8.7 GB required
+
+159/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:46:01)
+source 1, step 157, 23550.0 Hz
+estimated 8.60 GB RAM of available 9.97 GB required
+
+... waiting for resources and checking every second (Aug 26 2024, 18:46:17)
+5 NumCalc instances running at 32.10% CPU load
+4.64 GB RAM available (26.48 GB used), 8.7 GB required
+
+160/160 starting instance from 'myHRTF_project_R' (Aug 26 2024, 18:47:31)
+source 1, step 153, 22950.0 Hz
+estimated 8.28 GB RAM of available 9.59 GB required
+
+
+... waiting for the last NumCalc instances to finish (checking every second, Aug 26 2024, 18:47:46)
+
+All NumCalc projects finished at Aug 26 2024, 18:55:24
